@@ -1,19 +1,18 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class GameUIManager : VisualElement {
+public class TitleUIManager : VisualElement {
     VisualElement btnQuit;
     VisualElement btnStart;
-
-    bool clickedQuit = false;
-    bool clickedStart = false;
 
     GameObject AudioHauntedHouse;
     AudioSource AudioSourceAudioHauntedHouse;
     AudioClip AudioClipHauntedHouse;
 
-    public new class UxmlFactory : UxmlFactory<GameUIManager, UxmlTraits> { }
-    public GameUIManager() {
+    bool clickedStart = false;
+
+    public new class UxmlFactory : UxmlFactory<TitleUIManager, UxmlTraits> { }
+    public TitleUIManager() {
         RegisterCallback<GeometryChangedEvent>(OnGeometryChange);
     }
     void OnGeometryChange(GeometryChangedEvent evt) {
@@ -23,13 +22,9 @@ public class GameUIManager : VisualElement {
         btnStart = this.Q("btnStart");
         btnStart?.RegisterCallback<ClickEvent>(ev => ClickedStart());
     }
-    void Start() {
-    }
-    void Update() {
-    }
     void ClickedQuit() {
         Debug.Log("Clicked quit game");
-        clickedQuit = true;
+        Application.Quit();
     }
     void ClickedStart() {
         AudioHauntedHouse = GameObject.Find("AudioHauntedHouse");
@@ -38,11 +33,16 @@ public class GameUIManager : VisualElement {
 
         Debug.Log("game start");
         clickedStart = true;
-
         PlayHauntedHouse();
-        clickedStart = false;
     }
     void PlayHauntedHouse() {
         AudioSourceAudioHauntedHouse.Play();
+    }
+
+    void GoToScene() {
+        int counter = 0;
+        while (counter < 12000) {
+            counter++;
+        }
     }
 }

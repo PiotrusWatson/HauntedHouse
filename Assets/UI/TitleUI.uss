@@ -26,3 +26,8 @@
     -unity-text-outline-width: 2px;
     color: rgb(0, 0, 0);
 }
+
+.button:active {
+    -unity-font: url('project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=ba96ec8cf761d354abc17e0a27f2552d&type=3#NotInter-Regular');
+    color: rgb(255, 0, 255);
+}
