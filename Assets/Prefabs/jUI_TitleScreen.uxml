@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/jUI_TitleScreen.uss?fileID=7433441132597879392&amp;guid=464ea8a54d975184db370ff9113d8733&amp;type=3#jUI_TitleScreen" />
-    <ui:Label tabindex="-1" text="Haunted House" display-tooltip-when-elided="true" name="Title" style="height: auto; white-space: nowrap; -unity-text-align: middle-center; top: 25%; justify-content: flex-start; align-items: auto; align-self: center; -unity-font: url(&apos;project://database/Assets/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&amp;guid=655041e8d82f52a47803a0ae50386f68&amp;type=3#NotInter-Regular&apos;); -unity-font-style: bold; font-size: 58px; -unity-text-outline-color: rgb(0, 255, 0); -unity-text-outline-width: 2px;" />
-    <ui:Button text="Quit" display-tooltip-when-elided="true" name="buttonQuit" class="button" style="align-self: center; top: 50%; left: -25%; font-size: 48px; -unity-text-outline-color: rgb(0, 255, 0); -unity-text-outline-width: 2px; -unity-font-style: bold;" />
-    <ui:Button text="Start" display-tooltip-when-elided="true" name="buttonStart" class="button" style="align-self: center; top: 30%; left: 25%; font-size: 48px; -unity-text-outline-color: rgb(0, 255, 0); -unity-text-outline-width: 2px; -unity-font-style: bold;" />
+    <ui:Label tabindex="100" text="Haunted House" display-tooltip-when-elided="true" name="Title" class="title" />
+    <ui:Button text="Quit" display-tooltip-when-elided="true" name="btnQuit" tabindex="100" class="button" style="left: -25%; top: 50%;" />
+    <ui:Button text="Start&#10;" display-tooltip-when-elided="true" name="btnStart" tabindex="100" class="button" style="top: 32%; right: auto; left: 25%;" />
 </ui:UXML>
