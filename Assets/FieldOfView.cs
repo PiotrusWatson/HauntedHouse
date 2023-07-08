@@ -7,11 +7,20 @@ public class FieldOfView : MonoBehaviour
     public float viewRadius;
     [Range(0, 360)]
     public float viewAngle;
+
+    public float pollDelay;
     
     public LayerMask targetMask;
     public LayerMask obstacleMask;
 
 
+
+
+    void Start()
+    {
+        visibleTargets = new List<Transform>();
+        StartCoroutine(FindTargetsWithDelay(pollDelay));
+    }
     IEnumerator FindTargetsWithDelay(float delay){
         while(true){
             yield return new WaitForSeconds(delay);
@@ -20,6 +29,7 @@ public class FieldOfView : MonoBehaviour
     }
     public List<Transform> visibleTargets;
     void FindVisibleTargets(){
+        visibleTargets.Clear();
         Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
         for (int i=0; i < targetsInViewRadius.Length; i++){
             Transform target = targetsInViewRadius[i].transform;
@@ -27,7 +37,7 @@ public class FieldOfView : MonoBehaviour
             if (Vector3.Angle(transform.forward, directionToTarget) < viewAngle / 2){
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
-                if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstacleMask)){
+                if (Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstacleMask)){
                     visibleTargets.Add(target);
                 }
             }
@@ -41,10 +51,7 @@ public class FieldOfView : MonoBehaviour
         return new Vector3(Mathf.Sin(angle * Mathf.Deg2Rad), 0, Mathf.Cos(angle * Mathf.Deg2Rad)); 
     }
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+  
 
     // Update is called once per frame
     void Update()
