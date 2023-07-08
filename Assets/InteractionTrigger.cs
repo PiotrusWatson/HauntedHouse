@@ -11,7 +11,7 @@ using UnityEngine.UI;
 public class InteractionTrigger : MonoBehaviour
 {
     public bool protagonistIsClose;
-
+    public GameObject dYNAMMITE;
     // Start is called before the first frame update
    // void Start()
     //{
@@ -23,7 +23,15 @@ public class InteractionTrigger : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && protagonistIsClose)
         {
+           if (dYNAMMITE.activeInHierarchy)
+            {
 
+            }
+              else
+       // if (dYNAMMITE.InHierarchy)
+          {
+                    dYNAMMITE.SetActive(true);
+          }
         }
     }
 
