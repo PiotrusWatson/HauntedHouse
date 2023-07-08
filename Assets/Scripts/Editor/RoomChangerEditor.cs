@@ -6,8 +6,10 @@ using UnityEngine;
 [CustomEditor(typeof(RoomChangeUnderstander))]
 public class RoomChangerEditor : Editor
 {
-    void OnSceneGui(){
+    void OnSceneGUI(){
         RoomChangeUnderstander changer = (RoomChangeUnderstander) target;
         Handles.color = Color.green;
+        changer.RoomCentre = Handles.PositionHandle(changer.RoomCentre, Quaternion.identity);
+        Handles.Label(changer.RoomCentre, "Centre of Room");
     }
 }

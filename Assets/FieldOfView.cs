@@ -7,7 +7,9 @@ public class FieldOfView : MonoBehaviour
     public float viewRadius;
     [Range(0, 360)]
     public float viewAngle;
-
+    
+    public LayerMask targetMask;
+    public LayerMask obstacleMask;
     public Vector3 DirectionFromAngle(float angle, bool angleIsGlobal){
         if (!angleIsGlobal) {
             angle += transform.eulerAngles.y;

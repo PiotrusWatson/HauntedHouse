@@ -7597,7 +7597,15 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2821989949338271693, guid: f36e9d496da3b334d807b9f1cee18fa0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821989949338271693, guid: f36e9d496da3b334d807b9f1cee18fa0, type: 3}
       propertyPath: RoomCentre.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821989949338271693, guid: f36e9d496da3b334d807b9f1cee18fa0, type: 3}
+      propertyPath: RoomCentre.z
       value: 22.58
       objectReference: {fileID: 0}
     - target: {fileID: 2821989949338271693, guid: f36e9d496da3b334d807b9f1cee18fa0, type: 3}
@@ -7837,7 +7845,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4837329652793204, guid: 88498815dea432045b6eaa9875ec268a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 30.318804
+      value: 30.31
       objectReference: {fileID: 0}
     - target: {fileID: 4837329652793204, guid: 88498815dea432045b6eaa9875ec268a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15641,6 +15649,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2821989949338271693, guid: f36e9d496da3b334d807b9f1cee18fa0, type: 3}
+      propertyPath: RoomCentre.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821989949338271693, guid: f36e9d496da3b334d807b9f1cee18fa0, type: 3}
+      propertyPath: RoomCentre.z
+      value: 9.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 2821989949338271693, guid: f36e9d496da3b334d807b9f1cee18fa0, type: 3}
       propertyPath: RoomChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 351279655}
@@ -15786,5 +15802,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5280f67d71ae0e42a5a07c003edb0de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 0
-  viewAngle: 0
+  viewRadius: 7.79
+  viewAngle: 83
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 0
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 0

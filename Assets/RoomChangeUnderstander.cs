@@ -5,14 +5,14 @@ using UnityEngine.Events;
 
 
 [System.Serializable]
-public class RoomEvent: UnityEvent<Vector2>{
+public class RoomEvent: UnityEvent<Vector3>{
 
 }
 
 public class RoomChangeUnderstander : MonoBehaviour
 {
     public RoomEvent RoomChanged;
-    public Vector2 RoomCentre;
+    public Vector3 RoomCentre;
     // Start is called before the first frame update
     void Start()
     {
