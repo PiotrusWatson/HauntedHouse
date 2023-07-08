@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b611b099447543498623838ccb3caf0, type: 3}
-  m_Name: Morale
+  m_Script: {fileID: 11500000, guid: ccd6bb154c278c440a475bbd1d622413, type: 3}
+  m_Name: SpookyCube
   m_EditorClassIdentifier: 
-  amount: 80
+  spookiness: 5
+  isSubtle: 1
+  spookCap: 20

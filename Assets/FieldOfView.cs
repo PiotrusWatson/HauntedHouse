@@ -1,7 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using System.Linq;
 
+[System.Serializable]
+public class SeeingEvent : UnityEvent<Transform[]>{
+
+}
 public class FieldOfView : MonoBehaviour
 {
     public float viewRadius;
@@ -13,6 +19,9 @@ public class FieldOfView : MonoBehaviour
     public LayerMask targetMask;
     public LayerMask obstacleMask;
 
+    public List<Transform> visibleTargets;
+    public SeeingEvent IsawANewThing;
+    
 
 
 
@@ -21,13 +30,22 @@ public class FieldOfView : MonoBehaviour
         visibleTargets = new List<Transform>();
         StartCoroutine(FindTargetsWithDelay(pollDelay));
     }
+    
     IEnumerator FindTargetsWithDelay(float delay){
-        while(true){
+        while(true)
+        {
             yield return new WaitForSeconds(delay);
+            List<Transform> lastCheckedTargets = new List<Transform>(visibleTargets);
             FindVisibleTargets();
+            if (GuyHasSeenNewThing(lastCheckedTargets, visibleTargets)){
+                IsawANewThing.Invoke(visibleTargets.ToArray());
+            }
         }
     }
-    public List<Transform> visibleTargets;
+    
+    bool GuyHasSeenNewThing(List<Transform> currentlyVisible, List<Transform> newlyVisible){
+        return newlyVisible.Except(currentlyVisible).ToList().Count > 0;
+    }
     void FindVisibleTargets(){
         visibleTargets.Clear();
         Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
