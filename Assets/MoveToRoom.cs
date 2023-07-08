@@ -19,7 +19,7 @@ public class MoveToRoom : MonoBehaviour
         transform.position = Vector3.Lerp(transform.position, target, moveSpeed * Time.smoothDeltaTime);
     }
 
-    public void MoveRooms(Vector2 newTarget){
-        target = new Vector3(newTarget.x, transform.position.y, newTarget.y);
+    public void MoveRooms(Vector3 newTarget){
+        target = new Vector3(newTarget.x, transform.position.y, newTarget.z);
     }
 }
