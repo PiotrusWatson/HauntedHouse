@@ -1,0 +1,28 @@
+.button:hover {
+    -unity-text-outline-color: rgb(255, 0, 255);
+}
+
+.button {
+    align-self: center;
+    font-size: 168px;
+    -unity-text-outline-color: rgb(0, 255, 0);
+    -unity-text-outline-width: 2px;
+    -unity-font-style: bold;
+    color: rgb(0, 0, 0);
+}
+
+.title {
+    height: auto;
+    white-space: nowrap;
+    -unity-text-align: middle-center;
+    top: 25%;
+    justify-content: flex-start;
+    align-items: auto;
+    align-self: center;
+    -unity-font: url('project://database/Assets/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=c92a3f9eea0abe341a22d4f542e73b53&type=3#NotInter-Regular');
+    -unity-font-style: bold;
+    font-size: 192px;
+    -unity-text-outline-color: rgb(0, 255, 0);
+    -unity-text-outline-width: 2px;
+    color: rgb(0, 0, 0);
+}

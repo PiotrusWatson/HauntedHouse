@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/jUI_TitleScreen.uss?fileID=7433441132597879392&amp;guid=464ea8a54d975184db370ff9113d8733&amp;type=3#jUI_TitleScreen" />
+    <ui:Label tabindex="100" text="Haunted House" display-tooltip-when-elided="true" name="Title" class="title" />
+    <ui:Button text="Quit" display-tooltip-when-elided="true" name="btnQuit" tabindex="100" class="button" style="left: -25%; top: 50%;" />
+    <ui:Button text="Start&#10;" display-tooltip-when-elided="true" name="btnStart" tabindex="100" class="button" style="top: 32%; right: auto; left: 25%;" />
+</ui:UXML>
