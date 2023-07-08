@@ -1,0 +1,22 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/GameUI.uss?fileID=7433441132597879392&amp;guid=1e646e0c6b345d843a304719c5fceb66&amp;type=3#GameUI" />
+    <GameUIManager name="GameUIManager" style="width: 100%; height: 100%;">
+        <ui:GroupBox name="ProtagonistInfo" style="flex-direction: row; left: 1%; top: 2.5%; width: 75%; height: 12.5%;">
+            <ui:ProgressBar value="100" name="HealthBar" high-value="100" title="Protagonist HP                                                     " style="flex-direction: row; width: 100%; height: 100%; min-width: 0; min-height: 0; max-width: 100%; max-height: 100%; color: rgb(0, 0, 0); white-space: nowrap; -unity-text-align: middle-center; background-color: rgba(255, 0, 0, 0);" />
+        </ui:GroupBox>
+        <ui:GroupBox name="CameraButtons" style="height: 62px; top: 70%; flex-direction: row; align-items: flex-start; width: 455px; left: 1%; align-self: flex-start;">
+            <ui:Button display-tooltip-when-elided="true" name="btnRoom01" style="width: 60px; height: 60px;">
+                <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/UI/example%20camera%20pic.png?fileID=2800000&amp;guid=fecbe8b039ef6654f802d6e12819781e&amp;type=3#example camera pic&apos;);" />
+            </ui:Button>
+            <ui:Button display-tooltip-when-elided="true" name="btnRoom02" style="width: 60px; height: 60px;">
+                <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/UI/example%20camera%20pic.png?fileID=2800000&amp;guid=fecbe8b039ef6654f802d6e12819781e&amp;type=3#example camera pic&apos;);" />
+            </ui:Button>
+            <ui:Button display-tooltip-when-elided="true" name="btnRoom03" style="width: 60px; height: 60px;">
+                <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/UI/example%20camera%20pic.png?fileID=2800000&amp;guid=fecbe8b039ef6654f802d6e12819781e&amp;type=3#example camera pic&apos;);" />
+            </ui:Button>
+            <ui:Button display-tooltip-when-elided="true" name="btnRoom04" style="width: 60px; height: 60px;">
+                <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/UI/example%20camera%20pic.png?fileID=2800000&amp;guid=fecbe8b039ef6654f802d6e12819781e&amp;type=3#example camera pic&apos;);" />
+            </ui:Button>
+        </ui:GroupBox>
+    </GameUIManager>
+</ui:UXML>
