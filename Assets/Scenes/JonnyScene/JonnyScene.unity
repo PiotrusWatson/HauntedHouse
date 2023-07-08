@@ -262,6 +262,7 @@ GameObject:
   - component: {fileID: 531864082}
   - component: {fileID: 531864084}
   - component: {fileID: 531864083}
+  - component: {fileID: 531864085}
   m_Layer: 0
   m_Name: TitleScreenUI
   m_TagString: Untagged
@@ -291,7 +292,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 531864081}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a410b213209442fb15a69799f0240a5, type: 3}
   m_Name: 
@@ -312,6 +313,18 @@ MonoBehaviour:
   m_ParentUI: {fileID: 0}
   sourceAsset: {fileID: 9197481963319205126, guid: 8345496581be43144bff88a5537ae5bb, type: 3}
   m_SortingOrder: 0
+--- !u!114 &531864085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 531864081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 974188e120bd5e34fb90c2500f3863e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &934356577
 GameObject:
   m_ObjectHideFlags: 0
