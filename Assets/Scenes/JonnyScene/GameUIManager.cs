@@ -3,31 +3,27 @@ using UnityEngine.UIElements;
 
 public class GameUIManager : VisualElement
 {
-    VisualElement m_LeaveArea;
-
+    VisualElement btnQuit;
+    VisualElement btnStart;
     public new class UxmlFactory : UxmlFactory<GameUIManager, UxmlTraits> { }
-
     public GameUIManager()
     {
-        this.RegisterCallback<GeometryChangedEvent>(OnGeometryChange);
+        RegisterCallback<GeometryChangedEvent>(OnGeometryChange);
     }
-
     void OnGeometryChange(GeometryChangedEvent evt)
     {
-        m_LeaveArea = this.Q("btnQuit");
+        btnQuit = this.Q("btnQuit");
+        btnQuit?.RegisterCallback<ClickEvent>(ev => ClickedQuit());
 
-        m_LeaveArea?.RegisterCallback<ClickEvent>(ev => ClickedButton());
+        btnStart = this.Q("btnStart");
+        btnStart?.RegisterCallback<ClickEvent>(ev => ClickedStart());
     }
-
-    // Start is called before the first frame update
-    void Start()
+    void ClickedQuit()
     {
-
-    }
-
-    void ClickedButton()
-    {
-
         Debug.Log("Clicked quit game");
+    }
+    void ClickedStart()
+    {
+        Debug.Log("Clicked start game");
     }
 }
