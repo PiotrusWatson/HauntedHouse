@@ -19,7 +19,8 @@ public class Exploder : MonoBehaviour {
 			if (component.enabled) {
 				component.onExplosionStarted(this);
 			}
-		}		
+		}
+		
 		while (explodeDuration > Time.time - explosionTime) {
 			disableCollider();
 			for (int i = 0; i < probeCount; i++) {
