@@ -21,7 +21,7 @@ public class InteractionTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && protagonistIsClose)
+        if (Input.GetKeyDown(KeyCode.E)) // && protagonistIsClose)
         {
            if (dYNAMMITE.activeInHierarchy)
             {
