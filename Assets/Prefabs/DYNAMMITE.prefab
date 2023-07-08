@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 840720068625610441}
   - component: {fileID: 2539724054125377719}
   - component: {fileID: 9109079743861546505}
+  - component: {fileID: 8582893139894674089}
   m_Layer: 0
   m_Name: DYNAMMITE
   m_TagString: Untagged
@@ -31,7 +32,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5548706037487228682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.02997917}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -162,8 +163,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionEffectsContainer: {fileID: 100000, guid: 15ca5b8fa431dc04291a79cadcd19874, type: 3}
-  scale: 1
-  playbackSpeed: 1
+  scale: 0.12
+  playbackSpeed: 0.75
 --- !u!114 &840720068625610441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,7 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightning: {fileID: 10800000, guid: 88c2fe3d0885d2e429d1c8ca39b51040, type: 3}
-  radius: 0
+  radius: 25
 --- !u!23 &2539724054125377719
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -237,7 +238,19 @@ BoxCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8582893139894674089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5548706037487228682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b261094429e056d40bc26a4f1b36717a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

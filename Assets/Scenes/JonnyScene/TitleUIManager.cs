@@ -9,6 +9,8 @@ public class TitleUIManager : VisualElement {
     AudioSource AudioSourceAudioHauntedHouse;
     AudioClip AudioClipHauntedHouse;
 
+    bool clickedStart = false;
+
     public new class UxmlFactory : UxmlFactory<TitleUIManager, UxmlTraits> { }
     public TitleUIManager() {
         RegisterCallback<GeometryChangedEvent>(OnGeometryChange);
@@ -22,6 +24,7 @@ public class TitleUIManager : VisualElement {
     }
     void ClickedQuit() {
         Debug.Log("Clicked quit game");
+        Application.Quit();
     }
     void ClickedStart() {
         AudioHauntedHouse = GameObject.Find("AudioHauntedHouse");
@@ -29,9 +32,17 @@ public class TitleUIManager : VisualElement {
         AudioClipHauntedHouse = AudioSourceAudioHauntedHouse.clip;
 
         Debug.Log("game start");
+        clickedStart = true;
         PlayHauntedHouse();
     }
     void PlayHauntedHouse() {
         AudioSourceAudioHauntedHouse.Play();
+    }
+
+    void GoToScene() {
+        int counter = 0;
+        while (counter < 12000) {
+            counter++;
+        }
     }
 }
