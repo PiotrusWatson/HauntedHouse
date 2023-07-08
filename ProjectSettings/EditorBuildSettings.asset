@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/JonnyScene/JonnyScene.unity
+    guid: 49f9e1f9116b9884bb9d47cd3b88a2bc
   m_configObjects: {}
