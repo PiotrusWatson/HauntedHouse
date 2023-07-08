@@ -4,19 +4,29 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Apple;
 
+[RequireComponent(typeof(NavMeshAgent))]
 public class GoToCUBE : MonoBehaviour
 {
-   // private NavMeshAgent protagonist;
+    NavMeshAgent protagonist;
    // public GameObject thingToChase;
     public Transform goal;
+    Vector3 destination;
 
     void Start()
     {
-        NavMeshAgent agent = GetComponent<NavMeshAgent>();
-        agent.destination = goal.position;
+    //    NavMeshAgent agent = GetComponent<NavMeshAgent>();
+        protagonist = GetComponent<NavMeshAgent>();
+        destination = protagonist.destination;
     }
 
-     // void Update()
+    void Update()
+    {
+        if (Vector3.Distance(destination, goal.position) > 1.0f)
+        {
+            destination = goal.position;
+            protagonist.destination = destination;
+        }
+    }
     // {
      //   destination = goal.position;
       //  agent.destination = destination;
