@@ -17,7 +17,7 @@ public class GoToCUBE : MonoBehaviour
     public Transform Goal;
     public float WayPointRange = 2;
     public float GoalRange = 10;
-    // Vector3 destination;
+    Vector3 destination;
 
     void Start()
     {
@@ -27,9 +27,9 @@ public class GoToCUBE : MonoBehaviour
        // destination = protagonist.destination;
     }
 
-    void Update()
-    {
-        protagonist.SetDestination(thingToChase.transform.position);
+    //void Update()
+    // {
+       // protagonist.SetDestination(thingToChase.transform.position);
 
       //  if (Vector3.Distance(protagonist.transform.position, WayPoint2.transform.position) < WayPointRange && InRange == false)
        // {
@@ -39,11 +39,11 @@ public class GoToCUBE : MonoBehaviour
        // {
         //    protagonist.SetDestination(WayPoint2.transform.position);
        // }
-       if (Vector3.Distance(protagonist.transform.position, Goal.transform.position) < GoalRange)
-       {
-           InRange = true;
-           protagonist.SetDestination(Goal.transform.position);
-       }
+      // if (Vector3.Distance(protagonist.transform.position, Goal.transform.position) < GoalRange)
+      // {
+        //   InRange = true;
+       //    protagonist.SetDestination(Goal.transform.position);
+     //  }
        // if (Vector3.Distance(protagonist.transform.position, Goal.transform.position) > GoalRange && InRange == true)
        // {
         //    InRange = false;
@@ -54,12 +54,13 @@ public class GoToCUBE : MonoBehaviour
         //   destination = goal.position;
         // protagonist.destination = destination;
         // }
-    }
-    // {
-     //   destination = goal.position;
-      //  agent.destination = destination;
-        // protagonist.destination = thingToChase.transform.position;
    // }
+   void Update()
+   {
+        destination = Goal.position;
+        protagonist.SetDestination(destination);
+  //      protagonist.destination = thingToChase.transform.position;
+   }
 
    // void Update()
     //{
