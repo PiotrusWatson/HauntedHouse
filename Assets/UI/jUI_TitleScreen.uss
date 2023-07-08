@@ -1,0 +1,8 @@
+jUI_TitleScreenSelector {
+}
+
+Button:hover {
+    background-color: rgb(255, 0, 255);
+    visibility: visible;
+    opacity: 1;
+}
