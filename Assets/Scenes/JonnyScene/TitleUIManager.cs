@@ -22,6 +22,7 @@ public class TitleUIManager : VisualElement {
     }
     void ClickedQuit() {
         Debug.Log("Clicked quit game");
+        Application.Quit();
     }
     void ClickedStart() {
         AudioHauntedHouse = GameObject.Find("AudioHauntedHouse");
@@ -32,6 +33,7 @@ public class TitleUIManager : VisualElement {
         PlayHauntedHouse();
     }
     void PlayHauntedHouse() {
-        AudioSourceAudioHauntedHouse.Play();
+        AudioSourceAudioHauntedHouse.Play(); 
+        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
     }
 }
