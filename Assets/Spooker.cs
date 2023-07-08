@@ -25,7 +25,7 @@ public class Spooker : MonoBehaviour
     void Start()
     {
         spookLedger = GameObject.FindGameObjectWithTag("Player").GetComponent<MoraleManager>();
-        gameObject.layer = SPOOKY_LAYER;
+        gameObject.layer = 0;
     }
 
     // Update is called once per frame
@@ -33,7 +33,14 @@ public class Spooker : MonoBehaviour
     {
         
     }
-    
+    public void ToggleSpook(bool isSpooky){
+        if (!isSpooky){
+            gameObject.layer = 0;
+        }
+        else {
+            gameObject.layer = SPOOKY_LAYER;
+        }
+    }
     public void CollectSpookData(Vector3 playerPosition)
     {
         positionAtTimeOfSpook = transform.position;
