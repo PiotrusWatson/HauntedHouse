@@ -1632,15 +1632,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8016137888086280051, guid: 0516ce423c8553042add41a7802e2734, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.883089
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 8016137888086280051, guid: 0516ce423c8553042add41a7802e2734, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.47
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8016137888086280051, guid: 0516ce423c8553042add41a7802e2734, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 21.48
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 8016137888086280051, guid: 0516ce423c8553042add41a7802e2734, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2794,8 +2794,8 @@ GameObject:
   - component: {fileID: 354698955}
   - component: {fileID: 354698954}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: trigger
+  m_TagString: Trap
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2807,7 +2807,7 @@ NavMeshObstacle:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354698953}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Shape: 1
   m_Extents: {x: 0.85, y: 0.5, z: 0.5}
@@ -2831,7 +2831,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -2895,8 +2895,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 354698953}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.5, y: 0.5, z: 21}
-  m_LocalScale: {x: 1.3702042, y: 2.0999174, z: 8.853621}
+  m_LocalPosition: {x: -10, y: 2, z: 12.5}
+  m_LocalScale: {x: 0.6239877, y: 0.37527525, z: 1.1788284}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
