@@ -28552,7 +28552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   viewRadius: 8
   viewAngle: 360
-  pollDelay: 1.1
+  pollDelay: 0.9
   targetMask:
     serializedVersion: 2
     m_Bits: 512
