@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneChanger : MonoBehaviour {
+public class CloseGameTheGame : MonoBehaviour {
     public bool endOfAnimation;
     // Start is called before the first frame update
     void Start() {
@@ -12,12 +12,13 @@ public class SceneChanger : MonoBehaviour {
     // Update is called once per frame
     void Update() {
 
-        if (endOfAnimation ) {
+        if (endOfAnimation) {
             ChangeScene();
         }
     }
 
     public void ChangeScene() {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+        Debug.Log("Game should quit now");
+        Application.Quit();
     }
 }
