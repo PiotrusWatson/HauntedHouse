@@ -1930,15 +1930,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a671dbf1c6235fb4c916891bd201c6f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thingToChase: {fileID: 0}
+  distanceWhenWereBored: 0
+  ZOMBIEMODE: 1
   InRange: 0
   delay: 0
   objectives:
   - {fileID: 0}
-  speed: 10
-  Goal: {fileID: 0}
-  WayPointRange: 2
-  GoalRange: 10
 --- !u!114 &8435112220568850303
 MonoBehaviour:
   m_ObjectHideFlags: 0
