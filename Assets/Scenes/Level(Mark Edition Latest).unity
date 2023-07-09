@@ -21880,6 +21880,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExplodeFridge
       objectReference: {fileID: 0}
+    - target: {fileID: 8603533995129927806, guid: 88d23bd4c503470418edb5257dbd3504, type: 3}
+      propertyPath: spook
+      value: 
+      objectReference: {fileID: 11400000, guid: 33d84c6ebbf3e9e4b872c10a056a0289, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

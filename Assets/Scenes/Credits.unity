@@ -332,11 +332,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 57798011d9dd5c740b8a3b96d5f6dbb4, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4405c850acd7b124189e6549fd24609e, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -546,8 +546,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -73, y: -946.71655}
-  m_SizeDelta: {x: 202.1252, y: 269.3818}
+  m_AnchoredPosition: {x: -73, y: -2060}
+  m_SizeDelta: {x: 202.1252, y: 750}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &484616822
 MonoBehaviour:
@@ -571,21 +571,58 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 42
-    m_FontStyle: 3
+    m_FontSize: 12
+    m_FontStyle: 2
     m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 42
+    m_MinSize: 1
+    m_MaxSize: 40
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'GAME OVER
+  m_Text: 'Director - Mark A, Piotrus W, "Dread", Tam P, Jonathan A
 
 
-    Nice try...'
+    Executive
+    Producer - Mark A, Piotrus W, "Dread", Tam P, Jonathan A
+
+
+    Marketing - Mark
+    A, Piotrus W, "Dread", Tam P, Jonathan A
+
+
+    Music - "Dread"
+
+
+    Level Design
+    - Tam P
+
+
+    Trap Design - Jonathan A, Piotrus W
+
+
+    Voices - Jonathan A
+
+
+    AI
+    - Mark A
+
+
+    Credits Writer - Mark A, Piotrus W, "Dread", Tam P, Jonathan A
+
+
+    Special
+    Thanks - Mark A, Piotrus W, "Dread", Tam P, Jonathan A
+
+
+
+
+
+
+
+    ...AND YOU!!!'
 --- !u!222 &484616823
 CanvasRenderer:
   m_ObjectHideFlags: 0
