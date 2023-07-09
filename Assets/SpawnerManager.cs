@@ -42,26 +42,27 @@ public class SpawnerManager : MonoBehaviour
 
     public void Spawn(){
         Spawner spawner = FindVisibleSpawner();
-        Debug.Log("The spawner is!!!" + spawner.name);
+        
         if (canSpawn && spawner != null){
+            zombieSpawnTimer.amount = spawnCooldown;
             spawner.SpawnThing();
             canSpawn = false;
-            
+            StartCoroutine(HandleSpawnCoolDown());
         }
+        
         
 
     }
 
     public Spawner FindVisibleSpawner(){
         foreach (GameObject spawny in spawners){
-            RaycastHit hitinfo;
-           Ray ray = cam.ViewportPointToRay(cam.WorldToViewportPoint(spawny.transform.position));
-           if (Physics.Raycast(ray, out hitinfo)){
-            if (hitinfo.collider.CompareTag("Spawner")){
+            Vector3 viewportSpawnerPos = cam.WorldToViewportPoint(spawny.transform.position);
+            if (viewportSpawnerPos.x < 0 || viewportSpawnerPos.y < 0){
+
+            } else{
                 return spawny.GetComponent<Spawner>();
             }
-            
-           }
+        
         }
         return null;
     }

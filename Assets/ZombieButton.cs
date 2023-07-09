@@ -7,9 +7,17 @@ public class ZombieButton : MonoBehaviour
 {
     SpawnerManager manager;
     public Morale zombieSpawnCooldown;
-    VisualElement zombieButton;
+    Button zombieButton;
     UIDocument doc;
     // Start is called before the first frame update
+
+    IEnumerator CountdownButton(){
+        while (zombieSpawnCooldown.amount > 0){
+            yield return new WaitForSeconds(1);
+            zombieButton.text = zombieSpawnCooldown.amount.ToString();
+        }
+        zombieButton.text = "ZOMB";
+    }
     void Start()
     {
         manager = Camera.main.GetComponent<SpawnerManager>();
@@ -26,5 +34,6 @@ public class ZombieButton : MonoBehaviour
 
     void ReleaseZombie(){
         manager.Spawn();
+        StartCoroutine(CountdownButton());
     }
 }
