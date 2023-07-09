@@ -583,7 +583,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "The night is still and there is but one rogue member of the resistance
-    in this town. \n\nCan you stop them from undoing your plans?"
+    in this town. \n\nCan you stop them from undoing your plans?\nYou remembered
+    you had rigged your desk up..."
 --- !u!222 &484616823
 CanvasRenderer:
   m_ObjectHideFlags: 0
