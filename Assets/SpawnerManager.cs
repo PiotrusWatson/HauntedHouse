@@ -41,9 +41,11 @@ public class SpawnerManager : MonoBehaviour
     }
 
     public bool Spawn(){
-        Spawner spawner = FindVisibleSpawner();
-        
-        if (canSpawn && spawner != null){
+        if (canSpawn){
+            Spawner spawner = FindVisibleSpawner();
+            if (spawner == null){
+                return false;
+            }
             zombieSpawnTimer.amount = spawnCooldown;
             spawner.SpawnThing();
             canSpawn = false;
