@@ -16,6 +16,7 @@ public class CursorInteraction : MonoBehaviour
     public GameObject createdGameObject;
     Material originalMaterial;
     public Material hoverMaterial;
+    public Material afterInteractionMaterial;
     bool isDone = false;
     Spooker spook;
     // Start is called before the first frame update
@@ -23,7 +24,7 @@ public class CursorInteraction : MonoBehaviour
         originalMaterial = GetComponent<Renderer>().materials[0];
         
         spook = GetComponent<Spooker>();
-    }
+            }
 
     // Update is called once per frame
     void Update() {       
@@ -48,14 +49,30 @@ public class CursorInteraction : MonoBehaviour
             Instantiate(createdGameObject, transform.position, Quaternion.identity);
             spook.ToggleSpook(true);
             isDone = true;
+
+            if (afterInteractionMaterial != null) {
+                GetComponent<Renderer>().material = afterInteractionMaterial;
+
+                if (transform.childCount > 0) {
+                    GetComponentInChildren<Renderer>().material = afterInteractionMaterial;
+                }
+            }
         }
     }
     public void CurrentHoveredGameObject(GameObject hoveredgameObject) {
-        Debug.Log("Material is: " + GetComponent<Renderer>().material);
         if (hoveredgameObject == gameObject && !isDone) {
             GetComponent<Renderer>().material = hoverMaterial;
-        } else {
+
+            if (transform.childCount > 0) {
+                GetComponentInChildren<Renderer>().material = hoverMaterial;
+            }
+
+        } else if (!isDone) {
             GetComponent<Renderer>().material = originalMaterial;
+
+            if (transform.childCount > 0) {
+                GetComponentInChildren<Renderer>().material = originalMaterial;
+            }
         }
     }
 }
