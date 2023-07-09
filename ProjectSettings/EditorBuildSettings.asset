@@ -8,5 +8,17 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JonnyScene/JonnyScene.unity
     guid: 49f9e1f9116b9884bb9d47cd3b88a2bc
+  - enabled: 1
+    path: Assets/Scenes/CringePlot.unity
+    guid: 9a447033f0352fb4f81454ce2c1b550c
+  - enabled: 1
+    path: Assets/Scenes/Level(Mark Edition Latest).unity
+    guid: e8ab9ab943812c54c8336244f0391ce7
+  - enabled: 1
+    path: Assets/Scenes/You Win.unity
+    guid: ef9beb45f395d094a87993195d2d0a9f
+  - enabled: 1
+    path: Assets/Scenes/Game Over.unity
+    guid: 3a47a5baa6394ab4993c3a2997719e5e
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7, type: 2}
