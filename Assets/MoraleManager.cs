@@ -19,7 +19,7 @@ public class MoraleManager : MonoBehaviour
     // Update is called once per frame
     void Update() {
         if (morale.amount <= 0) {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(4);
+            UnityEngine.SceneManagement.SceneManager.LoadScene(3);
         }
     }
 
