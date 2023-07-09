@@ -4772,6 +4772,10 @@ PrefabInstance:
       value: SM_Bld_Floor_Concrete_01 (20)
       objectReference: {fileID: 0}
     - target: {fileID: 1176181152034498, guid: 1beff61a305171641a76f9baf951ae59, type: 3}
+      propertyPath: m_TagString
+      value: End Point
+      objectReference: {fileID: 0}
+    - target: {fileID: 1176181152034498, guid: 1beff61a305171641a76f9baf951ae59, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 8
       objectReference: {fileID: 0}
@@ -18297,7 +18301,7 @@ PrefabInstance:
       objectReference: {fileID: 1945007794}
     - target: {fileID: 6955490079490675621, guid: ade61bf3f75266e4e9df7b098b3909c1, type: 3}
       propertyPath: delay
-      value: 600
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6955490079490675621, guid: ade61bf3f75266e4e9df7b098b3909c1, type: 3}
       propertyPath: thingToChase
