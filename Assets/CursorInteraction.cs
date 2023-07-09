@@ -14,17 +14,25 @@ public class FinishSpookingEvent : UnityEvent<GameObject>{
 public class CursorInteraction : MonoBehaviour
 {
     public GameObject createdGameObject;
+
     Material originalMaterial;
     public Material hoverMaterial;
     public Material afterInteractionMaterial;
+    
+    Renderer[] childRenderer;
+
     bool isDone = false;
+
     Spooker spook;
+
     // Start is called before the first frame update
     void Start() {
         originalMaterial = GetComponent<Renderer>().materials[0];
-        
+
+        childRenderer = GetComponentsInChildren<Renderer>();
+
         spook = GetComponent<Spooker>();
-            }
+    }
 
     // Update is called once per frame
     void Update() {       
@@ -50,28 +58,25 @@ public class CursorInteraction : MonoBehaviour
             spook.ToggleSpook(true);
             isDone = true;
 
-            if (afterInteractionMaterial != null) {
-                GetComponent<Renderer>().material = afterInteractionMaterial;
-
-                if (transform.childCount > 0) {
-                    GetComponentInChildren<Renderer>().material = afterInteractionMaterial;
+            foreach (Renderer renderer in childRenderer) {
+                if (afterInteractionMaterial != null) {
+                    renderer.material = afterInteractionMaterial;
                 }
             }
         }
     }
     public void CurrentHoveredGameObject(GameObject hoveredgameObject) {
         if (hoveredgameObject == gameObject && !isDone) {
-            GetComponent<Renderer>().material = hoverMaterial;
-
-            if (transform.childCount > 0) {
-                GetComponentInChildren<Renderer>().material = hoverMaterial;
+            foreach (Renderer renderer in childRenderer) {
+                if (hoverMaterial != null) {
+                    renderer.material = hoverMaterial;
+                }
             }
-
         } else if (!isDone) {
-            GetComponent<Renderer>().material = originalMaterial;
-
-            if (transform.childCount > 0) {
-                GetComponentInChildren<Renderer>().material = originalMaterial;
+            foreach (Renderer renderer in childRenderer) {
+                if (originalMaterial != null) {
+                    renderer.material = originalMaterial;
+                }
             }
         }
     }
