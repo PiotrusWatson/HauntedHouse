@@ -9,17 +9,13 @@ using UnityEngine.Apple;
 public class GoToCUBE : MonoBehaviour
 {
     NavMeshAgent protagonist;
-    // public GameObject thingToChase;
+    public float distanceWhenWereBored;
+    public bool ZOMBIEMODE = false;
     public bool InRange = false;
     public int delay;
     public GameObject[] objectives;
     int currentObj = 0;
-    // public float speed = 10.0f;
-    private float disTo1;
-    private float disTo2;
-    public Transform Goal;
-    public float WayPointRange = 2;
-    public float GoalRange = 10;
+    
     Vector3 destination;
 
     void Start()
@@ -63,7 +59,7 @@ public class GoToCUBE : MonoBehaviour
    {
 
         //      protagonist.destination = thingToChase.transform.position;
-        if (Vector3.Distance(this.transform.position, objectives[currentObj].transform.position) < 2)
+        if (Vector3.Distance(this.transform.position, objectives[currentObj].transform.position) < distanceWhenWereBored && !ZOMBIEMODE)
          //   Wait();
         currentObj++;
 

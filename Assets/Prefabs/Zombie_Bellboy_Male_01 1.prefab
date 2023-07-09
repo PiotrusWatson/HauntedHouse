@@ -7498,6 +7498,8 @@ GameObject:
   - component: {fileID: 6383399192367579576}
   - component: {fileID: 6955490079490675621}
   - component: {fileID: 8371734284113692176}
+  - component: {fileID: 912911564561816069}
+  - component: {fileID: 8477162357256669723}
   m_Layer: 0
   m_Name: Zombie_Bellboy_Male_01 1
   m_TagString: Untagged
@@ -7569,7 +7571,7 @@ Transform:
   - {fileID: 8115050916855346836}
   - {fileID: 7940404317806452513}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &3015155304700317895
 Animator:
@@ -7674,15 +7676,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a671dbf1c6235fb4c916891bd201c6f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thingToChase: {fileID: 0}
+  distanceWhenWereBored: 0
+  ZOMBIEMODE: 1
   InRange: 0
   delay: 0
   objectives:
   - {fileID: 4116746179216262660, guid: 241d1089412d02e489b2f4073d55f4c0, type: 3}
-  speed: 10
-  Goal: {fileID: 0}
-  WayPointRange: 2
-  GoalRange: 10
 --- !u!136 &8371734284113692176
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -7706,6 +7705,31 @@ CapsuleCollider:
   m_Height: 1.7
   m_Direction: 1
   m_Center: {x: -0.011059046, y: 0.864441, z: -0.032032102}
+--- !u!114 &912911564561816069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8694385477097833895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833d79ae5b4d73e49a64df2ef088ef89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spook: {fileID: 11400000, guid: ee38456f9980fbd459ee4bce6305c3ea, type: 2}
+--- !u!114 &8477162357256669723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8694385477097833895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ae0ec794b689724e98034ee405f542a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8730528967436024945
 GameObject:
   m_ObjectHideFlags: 0

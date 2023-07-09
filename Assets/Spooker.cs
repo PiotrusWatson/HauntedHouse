@@ -20,12 +20,14 @@ public class Spooker : MonoBehaviour
         spookLedger.RemoveSpooker(this);
     }
 
-
+    void Awake(){
+        gameObject.layer = 0;
+    }
     // Start is called before the first frame update
     void Start()
     {
         spookLedger = GameObject.FindGameObjectWithTag("Player").GetComponent<MoraleManager>();
-        //gameObject.layer = 0;
+    
     }
 
     // Update is called once per frame

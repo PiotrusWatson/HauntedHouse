@@ -30,11 +30,16 @@ public class MoraleManager : MonoBehaviour
     public void HandleSpook(Transform[] spooks){
         HashSet<Spooker> currentlySeenSpooks = spooks.Select(spook => spook.GetComponent<Spooker>()).ToHashSet<Spooker>();
         HashSet<Spooker> newSpooks = currentlySeenSpooks.Except(spookLedger).ToHashSet<Spooker>();
+        HashSet<Spooker> rejectedSpooks = new HashSet<Spooker>();
         foreach (Spooker spook in newSpooks){
             spook.CollectSpookData(transform.position);
             SubtractMorale(spook);
+            if (spook.GetComponent<GoToCUBE>() != null){
+                //zombie case :)
+                rejectedSpooks.Add(spook);
+            }
         }
-        spookLedger.UnionWith(newSpooks);
+        spookLedger.UnionWith(newSpooks.Intersect(rejectedSpooks));
         
     }
 
