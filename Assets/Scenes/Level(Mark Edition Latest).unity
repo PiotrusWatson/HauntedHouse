@@ -15368,7 +15368,7 @@ PrefabInstance:
       objectReference: {fileID: 1172727261}
     - target: {fileID: 7978535413644811275, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
       propertyPath: delay
-      value: 600
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7978535413644811275, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
       propertyPath: thingToChase
@@ -15434,6 +15434,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4601030497416853185, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1945007807}
+    - targetCorrespondingSourceObject: {fileID: 4601030497416853185, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1945007808}
   m_SourcePrefab: {fileID: 100100000, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
 --- !u!1 &963456121
 GameObject:
@@ -25320,6 +25323,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1537943108447134080, guid: e3a37a9f2a3b372459a20b6890b17462, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1945007808}
     - target: {fileID: 2780154981804297410, guid: e3a37a9f2a3b372459a20b6890b17462, type: 3}
       propertyPath: m_Name
       value: HealthBar
@@ -28537,7 +28544,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewRadius: 8
-  viewAngle: 87
+  viewAngle: 360
   pollDelay: 0.1
   targetMask:
     serializedVersion: 2
@@ -28561,6 +28568,20 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1945007808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654300501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f739a56ac7fbb1f4cb2b63d067382e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnCooldown: 10
+  zombieSpawnTimer: {fileID: 11400000, guid: 9cebdee1e143c1e41990f254efa25cfc, type: 2}
 --- !u!1 &1947331057 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3209090328146653077, guid: 25bd4568128cf9e438eb47a0ac09a512, type: 3}
@@ -28578,7 +28599,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1947331057}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f739a56ac7fbb1f4cb2b63d067382e63, type: 3}
   m_Name: 

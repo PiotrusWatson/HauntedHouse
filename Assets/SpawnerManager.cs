@@ -25,8 +25,8 @@ public class SpawnerManager : MonoBehaviour
     GameObject[] spawners;
     // Start is called before the first frame update
     void Awake()
-    {
-        cam = GetComponent<Camera>();
+    { 
+        //cam = GetComponent<Camera>();
         zombieSpawnTimer.amount = spawnCooldown;
     }
 
@@ -60,7 +60,7 @@ public class SpawnerManager : MonoBehaviour
 
     public Spawner FindVisibleSpawner(){
         foreach (GameObject spawny in spawners){
-            Vector3 viewportSpawnerPos = cam.WorldToViewportPoint(spawny.transform.position);
+            Vector3 viewportSpawnerPos = Camera.main.WorldToViewportPoint(spawny.transform.position);
             if (viewportSpawnerPos.x < 0 || viewportSpawnerPos.x > 1 || viewportSpawnerPos.y < 0 || viewportSpawnerPos.y > 1){
 
             } else{
