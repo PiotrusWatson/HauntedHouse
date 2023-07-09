@@ -39,7 +39,7 @@ public class MoraleManager : MonoBehaviour
                 rejectedSpooks.Add(spook);
             }
         }
-        spookLedger.UnionWith(newSpooks.Intersect(rejectedSpooks));
+        spookLedger.UnionWith(newSpooks.Except(rejectedSpooks));
         
     }
 
