@@ -25,7 +25,6 @@ public class GoToCUBE : MonoBehaviour
     {
         controller = GetComponent<Animator>();
         protagonist = GetComponent<NavMeshAgent>();
-        StartCoroutine(Wait());
     //    NavMeshAgent agent = GetComponent<NavMeshAgent>();
      //   protagonist = GetComponent<NavMeshAgent>();
        // destination = protagonist.destination;
