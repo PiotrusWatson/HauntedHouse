@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using System.Linq;
+using System.Reflection;
 
 [System.Serializable]
 public class SeeingEvent : UnityEvent<Transform[]>{
@@ -37,8 +38,29 @@ public class FieldOfView : MonoBehaviour
             yield return new WaitForSeconds(delay);
             List<Transform> lastCheckedTargets = new List<Transform>(visibleTargets);
             FindVisibleTargets();
-            if (GuyHasSeenNewThing(lastCheckedTargets, visibleTargets)){
-                IsawANewThing.Invoke(visibleTargets.ToArray());
+            List<Transform> zombies = new List<Transform>();
+            List<Transform> finalList = new List<Transform>();
+            foreach (Transform target in visibleTargets)
+            {
+                if (target.GetComponent<GoToCUBE>() != null)
+                {
+                    zombies.Add(target);
+                }
+            }
+            bool seenNewThing = GuyHasSeenNewThing(lastCheckedTargets, visibleTargets);
+            if (seenNewThing)
+            {
+                finalList.AddRange(visibleTargets);
+            }
+            if (zombies.Count > 0)
+            {
+                finalList.AddRange(zombies);
+            }
+
+            if (seenNewThing || zombies.Count > 0)
+            {
+                IsawANewThing.Invoke(finalList.ToArray());
+
             }
         }
     }
