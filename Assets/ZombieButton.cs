@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class ZombieButton : MonoBehaviour
 {
-    SpawnerManager manager;
+    public SpawnerManager manager;
     public Morale zombieSpawnCooldown;
     Button zombieButton;
     UIDocument doc;
@@ -20,7 +20,7 @@ public class ZombieButton : MonoBehaviour
     }
     void Start()
     {
-        manager = Camera.main.GetComponent<SpawnerManager>();
+       // manager = Camera.main.GetComponent<SpawnerManager>();
         doc = GetComponent<UIDocument>();
         zombieButton = doc.rootVisualElement.Query<Button>("ZombieButton");
         zombieButton.RegisterCallback<ClickEvent>(ev => ReleaseZombie());
