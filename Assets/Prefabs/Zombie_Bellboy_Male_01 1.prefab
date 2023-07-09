@@ -7676,8 +7676,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thingToChase: {fileID: 0}
   InRange: 0
-  WayPoint1: {fileID: 0}
-  WayPoint2: {fileID: 0}
+  delay: 0
+  objectives:
+  - {fileID: 4116746179216262660, guid: 241d1089412d02e489b2f4073d55f4c0, type: 3}
+  speed: 10
   Goal: {fileID: 0}
   WayPointRange: 2
   GoalRange: 10
