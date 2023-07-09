@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Apple;
@@ -8,6 +9,7 @@ using UnityEngine.Apple;
 // [RequireComponent(typeof(NavMeshAgent))]
 public class GoToCUBE : MonoBehaviour
 {
+    Animator controller;
     NavMeshAgent protagonist;
     public float distanceWhenWereBored;
     public bool ZOMBIEMODE = false;
@@ -15,11 +17,13 @@ public class GoToCUBE : MonoBehaviour
     public int delay;
     public GameObject[] objectives;
     int currentObj = 0;
+    public bool seenSwitch = false;
     
     Vector3 destination;
 
     void Start()
     {
+        controller = GetComponent<Animator>();
         protagonist = GetComponent<NavMeshAgent>();
         StartCoroutine(Wait());
     //    NavMeshAgent agent = GetComponent<NavMeshAgent>();
@@ -60,8 +64,13 @@ public class GoToCUBE : MonoBehaviour
 
         //      protagonist.destination = thingToChase.transform.position;
         if (Vector3.Distance(this.transform.position, objectives[currentObj].transform.position) < distanceWhenWereBored && !ZOMBIEMODE)
+        {
             //   Wait();
-            StartCoroutine (Wait());
+           // seenSwitch = true;
+            controller.SetBool("IsSearch", true);
+            StartCoroutine(Wait());
+        }
+
 
 
         if (currentObj >= objectives.Length)
@@ -75,12 +84,18 @@ public class GoToCUBE : MonoBehaviour
     }
 
   IEnumerator Wait() 
-  { 
-     yield return new WaitForSeconds(delay);
-     //Thread.Sleep(delay);
-        Debug.Log("Moving on");
-        currentObj++;
-  }
+  {
+        if (!seenSwitch)
+        {
+            seenSwitch = true;
+            yield return new WaitForSeconds(delay);
+            //Thread.Sleep(delay);
+            Debug.Log("Moving on");
+            currentObj++;
+            controller.SetBool("IsSearch", false);
+            seenSwitch = false;
+        }
+    }
 
   //  public static void Main()
   //  {
