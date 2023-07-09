@@ -7,14 +7,18 @@ using UnityEngine.Events;
 public class FinishSpookingEvent : UnityEvent<GameObject>{
 
 }
+
+//Could make more generic later???? if we need diff interactions oops
+[RequireComponent(typeof(Spooker))]
 public class CursorInteraction : MonoBehaviour
 {
     public GameObject CloneDYNAMMITE;
     bool isDone = false;
+    Spooker spook;
     // Start is called before the first frame update
     void Start()
     {
-        
+        spook = GetComponent<Spooker>();
     }
 
     // Update is called once per frame
@@ -37,6 +41,7 @@ public class CursorInteraction : MonoBehaviour
             Debug.Log("you clicked " + clickedgameObject.name);
             
             Instantiate(CloneDYNAMMITE, transform.position, Quaternion.identity);
+            spook.ToggleSpook(true);
             isDone = true;
         }
     }

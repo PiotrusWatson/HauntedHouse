@@ -1221,8 +1221,56 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1216768880967154295, guid: 1414842d154feea4a909645c7d7512a9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 164444164}
   m_SourcePrefab: {fileID: 100100000, guid: 1414842d154feea4a909645c7d7512a9, type: 3}
+--- !u!1 &164444163 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1216768880967154295, guid: 1414842d154feea4a909645c7d7512a9, type: 3}
+  m_PrefabInstance: {fileID: 164444162}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &164444164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164444163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3fffa05a48abc41b87c80d56d03028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownTimer: 3
+  timerIncrement: 1
+  spookOver:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 164444165}
+        m_TargetAssemblyTypeName: Spooker, Assembly-CSharp
+        m_MethodName: ToggleSpook
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &164444165 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7571980582249363195, guid: 1414842d154feea4a909645c7d7512a9, type: 3}
+  m_PrefabInstance: {fileID: 164444162}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 164444163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833d79ae5b4d73e49a64df2ef088ef89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &183450401 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1078426498901782, guid: bf729f413a9b7e949bee797d99d08e45, type: 3}
@@ -11417,7 +11465,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1710646294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.33, y: 0.89, z: 14.26}
+  m_LocalPosition: {x: -12.66, y: 0.89, z: 9.95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16066,6 +16114,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1509955457832358834, guid: 241d1089412d02e489b2f4073d55f4c0, type: 3}
+      propertyPath: viewAngle
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509955457832358834, guid: 241d1089412d02e489b2f4073d55f4c0, type: 3}
+      propertyPath: viewRadius
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509955457832358834, guid: 241d1089412d02e489b2f4073d55f4c0, type: 3}
       propertyPath: obstacleMask.m_Bits
       value: 1
       objectReference: {fileID: 0}
@@ -16078,6 +16134,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1509955457832358834, guid: 241d1089412d02e489b2f4073d55f4c0, type: 3}
+      propertyPath: IsawANewThing.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509955457832358834, guid: 241d1089412d02e489b2f4073d55f4c0, type: 3}
       propertyPath: IsawANewThing.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 7775957029625411273}
@@ -16086,11 +16146,19 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1509955457832358834, guid: 241d1089412d02e489b2f4073d55f4c0, type: 3}
+      propertyPath: IsawANewThing.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509955457832358834, guid: 241d1089412d02e489b2f4073d55f4c0, type: 3}
       propertyPath: IsawANewThing.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: HandleSpook
       objectReference: {fileID: 0}
     - target: {fileID: 1509955457832358834, guid: 241d1089412d02e489b2f4073d55f4c0, type: 3}
       propertyPath: IsawANewThing.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: MoraleManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1509955457832358834, guid: 241d1089412d02e489b2f4073d55f4c0, type: 3}
+      propertyPath: IsawANewThing.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: MoraleManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1509955457832358834, guid: 241d1089412d02e489b2f4073d55f4c0, type: 3}
@@ -16300,3 +16368,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   morale: {fileID: 11400000, guid: 6779c552e8e1b5b4fbdcc93d00a038a1, type: 2}
+  startingMorale: 40

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ChaseMe
   - Trap
+  - Particles
   layers:
   - Default
   - TransparentFX

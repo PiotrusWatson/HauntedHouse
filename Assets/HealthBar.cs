@@ -17,7 +17,7 @@ public class HealthBar : MonoBehaviour
         }
     }
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         doc = GetComponent<UIDocument>();
         bar = doc.rootVisualElement.Query<ProgressBar>("HealthBar");
