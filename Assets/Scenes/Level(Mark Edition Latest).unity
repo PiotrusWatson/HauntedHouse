@@ -2489,6 +2489,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1382534897581504, guid: e4c254ab796d88a44acdeccfbd5c5909, type: 3}
   m_PrefabInstance: {fileID: 655689814}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &181194566 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3472506373147068848, guid: 88d23bd4c503470418edb5257dbd3504, type: 3}
+  m_PrefabInstance: {fileID: 1479040637}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &183270099 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1746557428180654, guid: 42f49538d10d0c34d985182fb749398b, type: 3}
@@ -4329,6 +4334,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1216768880967154295, guid: 1414842d154feea4a909645c7d7512a9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 488903368}
+    - targetCorrespondingSourceObject: {fileID: 1216768880967154295, guid: 1414842d154feea4a909645c7d7512a9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 488903369}
   m_SourcePrefab: {fileID: 100100000, guid: 1414842d154feea4a909645c7d7512a9, type: 3}
 --- !u!1001 &309506340
 PrefabInstance:
@@ -7914,6 +7922,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1216768880967154295, guid: 1414842d154feea4a909645c7d7512a9, type: 3}
   m_PrefabInstance: {fileID: 308453082}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &488903362 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7571980582249363195, guid: 1414842d154feea4a909645c7d7512a9, type: 3}
+  m_PrefabInstance: {fileID: 308453082}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488903361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833d79ae5b4d73e49a64df2ef088ef89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &488903368
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8010,6 +8029,35 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &488903369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 488903361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3fffa05a48abc41b87c80d56d03028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownTimer: 1
+  timerIncrement: 1
+  spookOver:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 488903362}
+        m_TargetAssemblyTypeName: Spooker, Assembly-CSharp
+        m_MethodName: ToggleSpook
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &490177195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10547,7 +10595,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3731242923104179335, guid: 6f0037ebf20ae5e4b93ac7f7fed07559, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 842810428}
   m_SourcePrefab: {fileID: 100100000, guid: 6f0037ebf20ae5e4b93ac7f7fed07559, type: 3}
 --- !u!4 &653007286 stripped
 Transform:
@@ -12079,6 +12130,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8346135082591409226, guid: 770b295c2d50a2a4f9afb55e4ada410f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1295533394}
+    - targetCorrespondingSourceObject: {fileID: 8346135082591409226, guid: 770b295c2d50a2a4f9afb55e4ada410f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1295533395}
   m_SourcePrefab: {fileID: 100100000, guid: 770b295c2d50a2a4f9afb55e4ada410f, type: 3}
 --- !u!4 &723065320 stripped
 Transform:
@@ -13933,6 +13987,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4837329652793204, guid: 88498815dea432045b6eaa9875ec268a, type: 3}
   m_PrefabInstance: {fileID: 837829471}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &842810419 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3731242923104179335, guid: 6f0037ebf20ae5e4b93ac7f7fed07559, type: 3}
+  m_PrefabInstance: {fileID: 653007285}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &842810421 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3098604751767694920, guid: 6f0037ebf20ae5e4b93ac7f7fed07559, type: 3}
+  m_PrefabInstance: {fileID: 653007285}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842810419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833d79ae5b4d73e49a64df2ef088ef89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &842810428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 842810419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3fffa05a48abc41b87c80d56d03028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownTimer: 1
+  timerIncrement: 1
+  spookOver:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 842810421}
+        m_TargetAssemblyTypeName: Spooker, Assembly-CSharp
+        m_MethodName: ToggleSpook
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &844536287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16792,6 +16891,11 @@ Transform:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1217422800182712, guid: 94179664ac141d742b2bebeeb5e09184, type: 3}
   m_PrefabInstance: {fileID: 1149629188}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1078187583 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 522973617950686486, guid: ea5ca3c534f052a469efecd006fcbe15, type: 3}
+  m_PrefabInstance: {fileID: 1440601624}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1078619754
 PrefabInstance:
@@ -20034,6 +20138,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8346135082591409226, guid: 770b295c2d50a2a4f9afb55e4ada410f, type: 3}
   m_PrefabInstance: {fileID: 723065319}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1295533390 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4325288234306394734, guid: 770b295c2d50a2a4f9afb55e4ada410f, type: 3}
+  m_PrefabInstance: {fileID: 723065319}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295533388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833d79ae5b4d73e49a64df2ef088ef89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &1295533394
 AudioSource:
   m_ObjectHideFlags: 0
@@ -20041,7 +20156,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1295533388}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6a2ee2a5c1d0a2c468f894cbf882dc19, type: 3}
@@ -20130,6 +20245,35 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1295533395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295533388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3fffa05a48abc41b87c80d56d03028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownTimer: 1
+  timerIncrement: 1
+  spookOver:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1295533390}
+        m_TargetAssemblyTypeName: Spooker, Assembly-CSharp
+        m_MethodName: ToggleSpook
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1302590655 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1507151385514578, guid: 4b7e2afae84d5aa4b881c4348964870b, type: 3}
@@ -21252,7 +21396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8016137888086280051, guid: 12c3c80fb25df324b854d9b2149d5f70, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.267
+      value: 1.68
       objectReference: {fileID: 0}
     - target: {fileID: 8016137888086280051, guid: 12c3c80fb25df324b854d9b2149d5f70, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21260,7 +21404,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8016137888086280051, guid: 12c3c80fb25df324b854d9b2149d5f70, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 52.693
+      value: 52.63
       objectReference: {fileID: 0}
     - target: {fileID: 8016137888086280051, guid: 12c3c80fb25df324b854d9b2149d5f70, type: 3}
       propertyPath: m_LocalRotation.w
@@ -21880,13 +22024,56 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 522973617950686486, guid: ea5ca3c534f052a469efecd006fcbe15, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1440601631}
   m_SourcePrefab: {fileID: 100100000, guid: ea5ca3c534f052a469efecd006fcbe15, type: 3}
 --- !u!4 &1440601625 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 528824890901994284, guid: ea5ca3c534f052a469efecd006fcbe15, type: 3}
   m_PrefabInstance: {fileID: 1440601624}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1440601627 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3433576374987394969, guid: ea5ca3c534f052a469efecd006fcbe15, type: 3}
+  m_PrefabInstance: {fileID: 1440601624}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078187583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833d79ae5b4d73e49a64df2ef088ef89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1440601631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1078187583}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3fffa05a48abc41b87c80d56d03028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownTimer: 1
+  timerIncrement: 1
+  spookOver:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1440601627}
+        m_TargetAssemblyTypeName: Spooker, Assembly-CSharp
+        m_MethodName: ToggleSpook
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &1452502038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22293,20 +22480,83 @@ PrefabInstance:
       propertyPath: m_Name
       value: ExplodeFridge
       objectReference: {fileID: 0}
+    - target: {fileID: 3472506373147068848, guid: 88d23bd4c503470418edb5257dbd3504, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473813930151468164, guid: 88d23bd4c503470418edb5257dbd3504, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473847013370639692, guid: 88d23bd4c503470418edb5257dbd3504, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 3474003076686599794, guid: 88d23bd4c503470418edb5257dbd3504, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8603533995129927806, guid: 88d23bd4c503470418edb5257dbd3504, type: 3}
       propertyPath: spook
       value: 
       objectReference: {fileID: 11400000, guid: 33d84c6ebbf3e9e4b872c10a056a0289, type: 2}
+    - target: {fileID: 8603533995129927806, guid: 88d23bd4c503470418edb5257dbd3504, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3472506373147068848, guid: 88d23bd4c503470418edb5257dbd3504, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1479040644}
   m_SourcePrefab: {fileID: 100100000, guid: 88d23bd4c503470418edb5257dbd3504, type: 3}
 --- !u!4 &1479040638 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3468444107866710826, guid: 88d23bd4c503470418edb5257dbd3504, type: 3}
   m_PrefabInstance: {fileID: 1479040637}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1479040640 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8603533995129927806, guid: 88d23bd4c503470418edb5257dbd3504, type: 3}
+  m_PrefabInstance: {fileID: 1479040637}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181194566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833d79ae5b4d73e49a64df2ef088ef89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1479040644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181194566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3fffa05a48abc41b87c80d56d03028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownTimer: 1
+  timerIncrement: 1
+  spookOver:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1479040640}
+        m_TargetAssemblyTypeName: Spooker, Assembly-CSharp
+        m_MethodName: ToggleSpook
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!4 &1479561629 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4556159399655910, guid: 6940e6aa34c8e1a408ed30309435b68c, type: 3}
@@ -25266,7 +25516,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1752673229036390568, guid: fd2d21850aa49b14fae63389d5647025, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2135101248}
   m_SourcePrefab: {fileID: 100100000, guid: fd2d21850aa49b14fae63389d5647025, type: 3}
 --- !u!4 &1733540181 stripped
 Transform:
@@ -28961,7 +29214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5280f67d71ae0e42a5a07c003edb0de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  viewRadius: 8
+  viewRadius: 2
   viewAngle: 360
   pollDelay: 1
   targetMask:
@@ -29492,7 +29745,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 785475316971963075, guid: 310e88742d5f16a489f4ec77dc540281, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 50.01
+      value: 50.1
       objectReference: {fileID: 0}
     - target: {fileID: 785475316971963075, guid: 310e88742d5f16a489f4ec77dc540281, type: 3}
       propertyPath: m_LocalRotation.w
@@ -29529,7 +29782,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6432326601747721292, guid: 310e88742d5f16a489f4ec77dc540281, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2018418643}
   m_SourcePrefab: {fileID: 100100000, guid: 310e88742d5f16a489f4ec77dc540281, type: 3}
 --- !u!1001 &1985477356
 PrefabInstance:
@@ -30167,6 +30423,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4727007745974906, guid: 859fb1081cf847c46bb9f3873f572d95, type: 3}
   m_PrefabInstance: {fileID: 2017467780}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2018418639 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6432326601747721292, guid: 310e88742d5f16a489f4ec77dc540281, type: 3}
+  m_PrefabInstance: {fileID: 1980973844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2018418643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2018418639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9587dda69364fa54d9c8009ad15a3e50, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2021218232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32306,6 +32579,51 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: -1.5, y: 1.4990001, z: 0.075}
   m_TimeToStationary: 0.5
+--- !u!1 &2135101242 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1752673229036390568, guid: fd2d21850aa49b14fae63389d5647025, type: 3}
+  m_PrefabInstance: {fileID: 1733540180}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2135101244 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5193381111013902969, guid: fd2d21850aa49b14fae63389d5647025, type: 3}
+  m_PrefabInstance: {fileID: 1733540180}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135101242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 833d79ae5b4d73e49a64df2ef088ef89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2135101248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2135101242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb3fffa05a48abc41b87c80d56d03028, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countdownTimer: 1
+  timerIncrement: 1
+  spookOver:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2135101244}
+        m_TargetAssemblyTypeName: Spooker, Assembly-CSharp
+        m_MethodName: ToggleSpook
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2136500000 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1382534897581504, guid: e4c254ab796d88a44acdeccfbd5c5909, type: 3}
