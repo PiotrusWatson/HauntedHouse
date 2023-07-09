@@ -10,7 +10,7 @@ public class GoToCUBE : MonoBehaviour
     NavMeshAgent protagonist;
     public GameObject thingToChase;
     public bool InRange = false;
-    public int delay;
+    public float delay;
     public GameObject[] objectives;
     int currentObj = 0;
     public float speed = 10.0f;
@@ -24,6 +24,7 @@ public class GoToCUBE : MonoBehaviour
     void Start()
     {
         protagonist = GetComponent<NavMeshAgent>();
+        StartCoroutine(Wait());
     //    NavMeshAgent agent = GetComponent<NavMeshAgent>();
      //   protagonist = GetComponent<NavMeshAgent>();
        // destination = protagonist.destination;
@@ -62,7 +63,9 @@ public class GoToCUBE : MonoBehaviour
 
         //      protagonist.destination = thingToChase.transform.position;
         if (Vector3.Distance(this.transform.position, objectives[currentObj].transform.position) < 2)
-            currentObj++;
+         //   Wait();
+        currentObj++;
+
 
         if (currentObj >= objectives.Length)
             currentObj = 0;
@@ -74,6 +77,11 @@ public class GoToCUBE : MonoBehaviour
 
     }
 
+  IEnumerator Wait() 
+  { 
+       yield return new WaitForSeconds(delay);
+        Debug.Log("Moving on");
+  }
    // void Update()
     //{
       //  if (Input.GetMouseButtonDown(0))
