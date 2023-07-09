@@ -17,9 +17,10 @@ public class MoraleManager : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        
+    void Update() {
+        if (morale.amount <= 0) {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(4);
+        }
     }
 
     public void RemoveSpooker(Spooker spooker){
