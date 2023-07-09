@@ -10,8 +10,10 @@ public class GoToCUBE : MonoBehaviour
     NavMeshAgent protagonist;
     public GameObject thingToChase;
     public bool InRange = false;
-    public GameObject WayPoint1;
-    public GameObject WayPoint2;
+    public int delay;
+    public GameObject[] objectives;
+    int currentObj = 0;
+    public float speed = 10.0f;
     private float disTo1;
     private float disTo2;
     public Transform Goal;
@@ -57,10 +59,20 @@ public class GoToCUBE : MonoBehaviour
    // }
    void Update()
    {
-        destination = Goal.position;
+
+        //      protagonist.destination = thingToChase.transform.position;
+        if (Vector3.Distance(this.transform.position, objectives[currentObj].transform.position) < 2)
+            currentObj++;
+
+        if (currentObj >= objectives.Length)
+            currentObj = 0;
+
+        destination = objectives[currentObj].transform.position;
         protagonist.SetDestination(destination);
-  //      protagonist.destination = thingToChase.transform.position;
-   }
+        // this.transform.LookAt(objectives[currentObj].transform);
+        // this.transform.Translate(0,0, speed*Time.deltaTime);
+
+    }
 
    // void Update()
     //{
