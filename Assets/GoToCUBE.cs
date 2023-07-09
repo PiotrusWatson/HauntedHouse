@@ -60,8 +60,8 @@ public class GoToCUBE : MonoBehaviour
 
         //      protagonist.destination = thingToChase.transform.position;
         if (Vector3.Distance(this.transform.position, objectives[currentObj].transform.position) < distanceWhenWereBored && !ZOMBIEMODE)
-         //   Wait();
-        currentObj++;
+            //   Wait();
+            StartCoroutine (Wait());
 
 
         if (currentObj >= objectives.Length)
@@ -79,6 +79,7 @@ public class GoToCUBE : MonoBehaviour
      yield return new WaitForSeconds(delay);
      //Thread.Sleep(delay);
         Debug.Log("Moving on");
+        currentObj++;
   }
 
   //  public static void Main()
