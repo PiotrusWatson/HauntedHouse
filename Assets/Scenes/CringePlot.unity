@@ -449,8 +449,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -73, y: -744}
-  m_SizeDelta: {x: 202.1252, y: 188.2952}
+  m_AnchoredPosition: {x: -73, y: -946.71655}
+  m_SizeDelta: {x: 202.1252, y: 269.3818}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &484616822
 MonoBehaviour:
@@ -485,18 +485,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Hello there my
-
-    dear security
-
-    guard. I merely
-
-    wish for everyone
-
-    to
-    live forever,
-
-    is that so wrong?'
+  m_Text: "The night is still and there is but one rogue member of the resistance
+    in this town. \n\nCan you stop them from undoing your plans?"
 --- !u!222 &484616823
 CanvasRenderer:
   m_ObjectHideFlags: 0
