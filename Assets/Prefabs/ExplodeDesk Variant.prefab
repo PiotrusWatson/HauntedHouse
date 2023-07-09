@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 23292738863398714, guid: 7916be8eb63d3124c9b8f2789c8e284f, type: 3}
       propertyPath: m_Materials.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 23292738863398714, guid: 7916be8eb63d3124c9b8f2789c8e284f, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -115,7 +115,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02cabe9b9810fe2458836d03ef4f113d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CloneDYNAMMITE: {fileID: 5548706037487228682, guid: 21d81639cd7acb44dba054f9704607e3, type: 3}
+  createdGameObject: {fileID: 5548706037487228682, guid: 21d81639cd7acb44dba054f9704607e3, type: 3}
+  hoverMaterial: {fileID: 2100000, guid: 3e20f5bf9d56acd4fa71977443cee93a, type: 2}
+  afterInteractionMaterial: {fileID: 2100000, guid: 0e8665057841d2941967f9c75c25b26a, type: 2}
 --- !u!114 &7571980582249363195
 MonoBehaviour:
   m_ObjectHideFlags: 0
