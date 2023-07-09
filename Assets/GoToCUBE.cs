@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,7 +12,7 @@ public class GoToCUBE : MonoBehaviour
     public float distanceWhenWereBored;
     public bool ZOMBIEMODE = false;
     public bool InRange = false;
-    public float delay;
+    public int delay;
     public GameObject[] objectives;
     int currentObj = 0;
     
@@ -75,9 +76,16 @@ public class GoToCUBE : MonoBehaviour
 
   IEnumerator Wait() 
   { 
-       yield return new WaitForSeconds(delay);
+     yield return new WaitForSeconds(delay);
+     //Thread.Sleep(delay);
         Debug.Log("Moving on");
   }
+
+  //  public static void Main()
+  //  {
+ //       TimeSpan interval = new Time
+   // }
+
    // void Update()
     //{
       //  if (Input.GetMouseButtonDown(0))
