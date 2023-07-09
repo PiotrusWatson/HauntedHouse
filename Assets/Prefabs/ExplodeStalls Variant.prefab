@@ -70,15 +70,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 65016554265511100, guid: 7695f2be8e68d1346a203d9a90eecf81, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65016554265511100, guid: 7695f2be8e68d1346a203d9a90eecf81, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 65369381811166926, guid: 7695f2be8e68d1346a203d9a90eecf81, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65369381811166926, guid: 7695f2be8e68d1346a203d9a90eecf81, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 65919603777093088, guid: 7695f2be8e68d1346a203d9a90eecf81, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 65919603777093088, guid: 7695f2be8e68d1346a203d9a90eecf81, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
