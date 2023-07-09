@@ -8,10 +8,12 @@ public class MoraleManager : MonoBehaviour
 {
     HashSet<Spooker> spookLedger;
     public Morale morale;
+    public float startingMorale;
     // Start is called before the first frame update
     void Awake()
     {
         spookLedger = new HashSet<Spooker>();
+        morale.amount = startingMorale;
     }
 
     // Update is called once per frame
@@ -37,8 +39,9 @@ public class MoraleManager : MonoBehaviour
     }
 
     public void SubtractMorale(Spooker spook){
-        morale.amount -= spook.CalculateSpookiness();
-        Debug.Log("New morale is " + morale.amount);
+        float spookiness = spook.CalculateSpookiness();
+        morale.amount -= spookiness;
+        Debug.Log("Spookiness is " +spookiness);
     }
 
 

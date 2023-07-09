@@ -25,7 +25,7 @@ public class Spooker : MonoBehaviour
     void Start()
     {
         spookLedger = GameObject.FindGameObjectWithTag("Player").GetComponent<MoraleManager>();
-        gameObject.layer = 0;
+        //gameObject.layer = 0;
     }
 
     // Update is called once per frame
@@ -54,7 +54,7 @@ public class Spooker : MonoBehaviour
     public float CalculateSpookiness(){
         float spookCalculation;
         if (spook.isSubtle){
-            spookCalculation = spook.spookiness * distanceOfSpook;
+            spookCalculation = spook.spookiness * Mathf.Log10(distanceOfSpook);
             return Mathf.Clamp(spookCalculation, 0, spook.spookCap);
         }
         else {

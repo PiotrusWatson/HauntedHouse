@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd6bb154c278c440a475bbd1d622413, type: 3}
   m_Name: SpookyCube
   m_EditorClassIdentifier: 
-  spookiness: 5
+  spookiness: 10
   isSubtle: 1
   spookCap: 20
