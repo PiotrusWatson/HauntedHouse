@@ -31,6 +31,8 @@ public class TitleUIManager : VisualElement {
 
         Debug.Log("game start");
         PlayHauntedHouse();
+
+        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
     }
     void PlayHauntedHouse() {
         AudioSourceAudioHauntedHouse.Play();
