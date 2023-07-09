@@ -40,7 +40,7 @@ public class SpawnerManager : MonoBehaviour
         
     }
 
-    public void Spawn(){
+    public bool Spawn(){
         Spawner spawner = FindVisibleSpawner();
         
         if (canSpawn && spawner != null){
@@ -48,7 +48,9 @@ public class SpawnerManager : MonoBehaviour
             spawner.SpawnThing();
             canSpawn = false;
             StartCoroutine(HandleSpawnCoolDown());
+            return true;
         }
+        return false;
         
         
 

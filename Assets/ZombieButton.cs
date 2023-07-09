@@ -33,7 +33,9 @@ public class ZombieButton : MonoBehaviour
     }
 
     void ReleaseZombie(){
-        manager.Spawn();
-        StartCoroutine(CountdownButton());
+        if (manager.Spawn()){
+            StartCoroutine(CountdownButton());
+        }
+        
     }
 }
