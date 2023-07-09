@@ -28878,6 +28878,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2002635674}
     m_Modifications:
+    - target: {fileID: 1203880005899186359, guid: 1414842d154feea4a909645c7d7512a9, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1203880005899186359, guid: 1414842d154feea4a909645c7d7512a9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2f834016e53f12c42a12baecd4450e34, type: 2}
+    - target: {fileID: 1203880005899186359, guid: 1414842d154feea4a909645c7d7512a9, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3e20f5bf9d56acd4fa71977443cee93a, type: 2}
     - target: {fileID: 1216768880967154295, guid: 1414842d154feea4a909645c7d7512a9, type: 3}
       propertyPath: m_Name
       value: ExplodeDesk
@@ -28926,6 +28938,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4553473201670722810, guid: 1414842d154feea4a909645c7d7512a9, type: 3}
+      propertyPath: hoverMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 3e20f5bf9d56acd4fa71977443cee93a, type: 2}
+    - target: {fileID: 4553473201670722810, guid: 1414842d154feea4a909645c7d7512a9, type: 3}
+      propertyPath: createdGameObject
+      value: 
+      objectReference: {fileID: 5548706037487228682, guid: 21d81639cd7acb44dba054f9704607e3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
