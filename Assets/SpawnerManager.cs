@@ -57,7 +57,7 @@ public class SpawnerManager : MonoBehaviour
     public Spawner FindVisibleSpawner(){
         foreach (GameObject spawny in spawners){
             Vector3 viewportSpawnerPos = cam.WorldToViewportPoint(spawny.transform.position);
-            if (viewportSpawnerPos.x < 0 || viewportSpawnerPos.y < 0){
+            if (viewportSpawnerPos.x < 0 || viewportSpawnerPos.x > 1 || viewportSpawnerPos.y < 0 || viewportSpawnerPos.y > 1){
 
             } else{
                 return spawny.GetComponent<Spawner>();
