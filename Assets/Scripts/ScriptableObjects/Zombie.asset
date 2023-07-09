@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd6bb154c278c440a475bbd1d622413, type: 3}
   m_Name: Zombie
   m_EditorClassIdentifier: 
-  spookiness: 1
+  spookiness: 2
   isSubtle: 0
   spookCap: 15
