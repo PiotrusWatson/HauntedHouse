@@ -28641,7 +28641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   morale: {fileID: 11400000, guid: 6779c552e8e1b5b4fbdcc93d00a038a1, type: 2}
-  startingMorale: 1
+  startingMorale: 100
 --- !u!114 &1945007807
 MonoBehaviour:
   m_ObjectHideFlags: 0
