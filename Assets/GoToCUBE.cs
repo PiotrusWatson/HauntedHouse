@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,12 +9,12 @@ using UnityEngine.Apple;
 public class GoToCUBE : MonoBehaviour
 {
     NavMeshAgent protagonist;
-    public GameObject thingToChase;
+    // public GameObject thingToChase;
     public bool InRange = false;
-    public float delay;
+    public int delay;
     public GameObject[] objectives;
     int currentObj = 0;
-    public float speed = 10.0f;
+    // public float speed = 10.0f;
     private float disTo1;
     private float disTo2;
     public Transform Goal;
@@ -79,9 +80,16 @@ public class GoToCUBE : MonoBehaviour
 
   IEnumerator Wait() 
   { 
-       yield return new WaitForSeconds(delay);
+     yield return new WaitForSeconds(delay);
+     //Thread.Sleep(delay);
         Debug.Log("Moving on");
   }
+
+  //  public static void Main()
+  //  {
+ //       TimeSpan interval = new Time
+   // }
+
    // void Update()
     //{
       //  if (Input.GetMouseButtonDown(0))
