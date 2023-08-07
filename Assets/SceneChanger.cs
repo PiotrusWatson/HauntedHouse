@@ -15,11 +15,19 @@ public class SceneChanger : MonoBehaviour
     void Update() {
 
         if (endOfAnimation ) {
-            ChangeScene();
+            //ChangeScene();
         }
     }
 
     public void ChangeScene() {
         UnityEngine.SceneManagement.SceneManager.LoadScene(2);
+    }
+
+    public void BackToMenu(){
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
+
+    public void ToCredits(){
+        UnityEngine.SceneManagement.SceneManager.LoadScene(5);
     }
 }
