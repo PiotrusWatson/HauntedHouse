@@ -18,8 +18,8 @@ public class SceneChangeToLose : MonoBehaviour {
 
     }
 
-    public void OnCollisionEnter(Collision collision) {
-        if (collision.gameObject.name == "protagonist")
+    public void OnTriggerEnter(Collider collider) {
+        if (collider.gameObject.name == "protagonist")
             isCollidedWithObj1 = true;
 
         if (isCollidedWithObj1) {
