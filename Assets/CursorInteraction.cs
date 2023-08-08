@@ -11,6 +11,7 @@ public class FinishSpookingEvent : UnityEvent<GameObject>{
 
 //Could make more generic later???? if we need diff interactions oops
 [RequireComponent(typeof(Spooker))]
+[RequireComponent(typeof(AudioSource))]
 public class CursorInteraction : MonoBehaviour
 {
     public GameObject createdGameObject;
@@ -18,20 +19,30 @@ public class CursorInteraction : MonoBehaviour
     Material originalMaterial;
     public Material hoverMaterial;
     public Material afterInteractionMaterial;
+    public AudioClip[] explosions;
     
     Renderer[] childRenderer;
 
     bool isDone = false;
+    
 
     Spooker spook;
+    AudioSource audioSource;
+    
+    void MakeSomeNoise(){
+        AudioClip pickedSplode = explosions[Random.Range(0, explosions.Length)];
+        audioSource.clip = pickedSplode;
+        audioSource.Play();
+    }
 
     // Start is called before the first frame update
     void Start() {
         originalMaterial = GetComponent<Renderer>().materials[0];
 
         childRenderer = GetComponentsInChildren<Renderer>();
-
+        audioSource = GetComponent<AudioSource>();
         spook = GetComponent<Spooker>();
+
     }
 
     // Update is called once per frame
@@ -53,7 +64,7 @@ public class CursorInteraction : MonoBehaviour
     public void CurrentClickedGameObject(GameObject clickedgameObject) {
         if (clickedgameObject == gameObject && !isDone) {
             Debug.Log("you clicked " + clickedgameObject.name);
-
+            MakeSomeNoise();
             Instantiate(createdGameObject, transform.position, Quaternion.identity);
             spook.ToggleSpook(true);
             isDone = true;
