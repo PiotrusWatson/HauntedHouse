@@ -8,10 +8,11 @@ public class MoveOnUp : MonoBehaviour
     public Image thingToCheckVisibilityOn;
     public float speed;
     public float yPointToStopOn;
+    GameObject skipButton;
     // Start is called before the first frame update
     void Start()
     {
-        
+        skipButton = GameObject.Find("Skip");
     }
 
     // Update is called once per frame
@@ -19,6 +20,9 @@ public class MoveOnUp : MonoBehaviour
     {
         if (thingToCheckVisibilityOn.rectTransform.position.y < yPointToStopOn){
             transform.position += transform.up * speed * Time.deltaTime;
+        }
+        else if (skipButton){
+            skipButton.SetActive(false);
         }
         
     }
