@@ -12,15 +12,18 @@ public class GoToCUBE : MonoBehaviour
     public GameObject[] objectives;
     public bool seenSwitch = false;
     
+    
     Animator controller;
     NavMeshAgent protagonist;
     int currentObj = 0;
     Vector3 destination;
+    float oldSpeed;
 
     void Start()
     {
         controller = GetComponent<Animator>();
         protagonist = GetComponent<NavMeshAgent>();
+        oldSpeed = protagonist.speed;
     }
 
    void Update()
@@ -29,6 +32,7 @@ public class GoToCUBE : MonoBehaviour
         if (Vector3.Distance(this.transform.position, objectives[currentObj].transform.position) < distanceWhenWereBored && !ZOMBIEMODE)
         {
             controller.SetBool("IsSearch", true);
+            protagonist.speed = 0;
             StartCoroutine(Wait());
         }
 
@@ -48,6 +52,7 @@ public class GoToCUBE : MonoBehaviour
             seenSwitch = true;
             yield return new WaitForSeconds(delay);
             currentObj++;
+            protagonist.speed = oldSpeed;
             controller.SetBool("IsSearch", false);
             seenSwitch = false;
         }

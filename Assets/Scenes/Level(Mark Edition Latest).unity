@@ -4327,6 +4327,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3969283465642735417, guid: 1414842d154feea4a909645c7d7512a9, type: 3}
+      propertyPath: m_Carve
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969283465642735417, guid: 1414842d154feea4a909645c7d7512a9, type: 3}
+      propertyPath: m_Shape
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3969283465642735417, guid: 1414842d154feea4a909645c7d7512a9, type: 3}
+      propertyPath: m_Extents.z
+      value: 1.5690001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15658,7 +15670,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5140823319445264650, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
       propertyPath: m_Speed
-      value: 1
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5140823319445264650, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
+      propertyPath: m_Radius
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5140823319445264650, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
       propertyPath: m_Acceleration
@@ -15690,7 +15706,7 @@ PrefabInstance:
       objectReference: {fileID: 1172727261}
     - target: {fileID: 7978535413644811275, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
       propertyPath: delay
-      value: 10
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7978535413644811275, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
       propertyPath: thingToChase
@@ -28708,7 +28724,7 @@ NavMeshObstacle:
   m_Shape: 1
   m_Extents: {x: 1.25, y: 1.498, z: 0.085}
   m_MoveThreshold: 0.1
-  m_Carve: 0
+  m_Carve: 1
   m_CarveOnlyStationary: 1
   m_Center: {x: -1.25, y: 1.498, z: 0.085}
   m_TimeToStationary: 0.5
