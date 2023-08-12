@@ -8,6 +8,8 @@ TagManager:
   - Trap
   - Particles
   - Spawner
+  - End Point
+  - Zombie
   layers:
   - Default
   - TransparentFX

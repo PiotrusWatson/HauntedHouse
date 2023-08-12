@@ -35,9 +35,11 @@ public class GunManager : MonoBehaviour
         StartCoroutine(StopFlash());
         Instantiate(bulletEffect, muzzleFlash.transform.position, transform.rotation);
         RaycastHit hit;
-        Physics.Raycast(muzzleFlash.transform.position, transform.forward, out hit);
+        bool isHit = Physics.Raycast(transform.position, transform.forward, out hit);
+        
         Health health = hit.collider.GetComponent<Health>();
-        if (health){
+        Debug.DrawLine(transform.position, hit.collider.transform.position);
+        if (isHit && health){
             health.TakeDamage(damage);
         }
 
