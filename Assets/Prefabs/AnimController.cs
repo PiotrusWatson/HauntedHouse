@@ -9,6 +9,8 @@ public class AnimController : MonoBehaviour
     private Animator animator;
     private NavMeshAgent agent;
     public Rigidbody rb;
+    public GameObject corpse;
+    public float deathForce;
     
     
 
@@ -38,6 +40,13 @@ public class AnimController : MonoBehaviour
 
     public void Owie(){
         animator.SetTrigger("Ow");
+    }
+
+    public void Ded(){
+        GameObject builtCorpse = Instantiate(corpse, transform.position, transform.rotation);
+        Rigidbody corpseRigidbody = builtCorpse.GetComponentInChildren<Rigidbody>();
+        corpseRigidbody.AddForce(transform.forward * deathForce);
+        Destroy(gameObject); //todo: fix this so it doesn't break everything
     }
 
 }
