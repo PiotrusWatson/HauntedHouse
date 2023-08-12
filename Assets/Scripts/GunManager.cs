@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class GunManager : MonoBehaviour
 {
-
+    MultipleAudioManager multipleAudioManager;
+    public AudioClip brackabracka;
     public float damage;
     public GameObject muzzleFlash;
     public GameObject bulletEffect;
     //play animation
     Animator animator;
+    AudioSource source;
     public bool DebugBang;
     public float amountToStayUp;
     
@@ -18,6 +20,8 @@ public class GunManager : MonoBehaviour
     void Awake()
     {
         animator = GetComponent<Animator>();
+        source = GetComponent<AudioSource>();
+        multipleAudioManager = GetComponentInChildren<MultipleAudioManager>();
     }
 
     // Update is called once per frame
@@ -31,6 +35,7 @@ public class GunManager : MonoBehaviour
     //play animation
     public void Fire(){
         animator.SetTrigger("BangBang");
+        multipleAudioManager.Play(brackabracka);
         muzzleFlash.SetActive(true);
         StartCoroutine(StopFlash());
         Instantiate(bulletEffect, muzzleFlash.transform.position, transform.rotation);

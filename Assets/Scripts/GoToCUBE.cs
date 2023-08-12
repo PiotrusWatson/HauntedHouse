@@ -8,7 +8,7 @@ public class GoToCUBE : MonoBehaviour
 
     public float distanceWhenWereBored;
     public bool ZOMBIEMODE = false;
-    public int delay;
+    public float delay;
     public GameObject[] objectives;
     public bool seenSwitch = false;
     public float rotationSpeed;
@@ -55,16 +55,25 @@ public class GoToCUBE : MonoBehaviour
   IEnumerator Wait(){
     yield return Wait(delay);
   }
-  IEnumerator Wait(int delay) 
+
+  public void Stop(float delay){
+    protagonist.speed = 0;
+    StartCoroutine(Wait(delay));
+  }
+  
+  IEnumerator Wait(float delay) 
   {
         if (!seenSwitch)
         {
             seenSwitch = true;
             yield return new WaitForSeconds(delay);
-            currentObj++;
-            protagonist.speed = oldSpeed;
-            controller.SetBool("IsSearch", false);
             seenSwitch = false;
+            protagonist.speed = oldSpeed;
+
+            if (!ZOMBIEMODE){
+                currentObj++;
+                controller.SetBool("IsSearch", false);
+            }
         }
     }
 

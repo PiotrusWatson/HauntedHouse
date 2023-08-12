@@ -2469,6 +2469,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   seenSwitch: 0
+  rotationSpeed: 10
 --- !u!136 &7264977972843555211
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -2531,7 +2532,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e48fb3534c053174b94009e6129210c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  brackabracka: {fileID: 8300000, guid: 7c246e94ee612fa40b0a490245ad7c24, type: 3}
+  damage: 20
   muzzleFlash: {fileID: 5463448492159069718}
+  bulletEffect: {fileID: 3557602641456082673, guid: 9dacee5e066ace6408532ee1be9811a5, type: 3}
   DebugBang: 0
   amountToStayUp: 0.001
 --- !u!82 &1341355710383817512
@@ -2545,10 +2549,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 29f66d384c766dd48a8654f49a5a141b, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

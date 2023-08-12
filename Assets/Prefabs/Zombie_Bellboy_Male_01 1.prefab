@@ -8196,6 +8196,7 @@ MonoBehaviour:
   objectives:
   - {fileID: 0}
   seenSwitch: 0
+  rotationSpeed: 0
 --- !u!136 &8371734284113692176
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8269,6 +8270,18 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6955490079490675621}
+        m_TargetAssemblyTypeName: GoToCUBE, Assembly-CSharp
+        m_MethodName: Stop
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 1
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
