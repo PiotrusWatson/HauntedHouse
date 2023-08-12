@@ -5,6 +5,7 @@ using UnityEngine;
 public class GunManager : MonoBehaviour
 {
 
+    public float damage;
     public GameObject muzzleFlash;
     public GameObject bulletEffect;
     //play animation
@@ -33,6 +34,12 @@ public class GunManager : MonoBehaviour
         muzzleFlash.SetActive(true);
         StartCoroutine(StopFlash());
         Instantiate(bulletEffect, muzzleFlash.transform.position, transform.rotation);
+        RaycastHit hit;
+        Physics.Raycast(muzzleFlash.transform.position, transform.forward, out hit);
+        Health health = hit.collider.GetComponent<Health>();
+        if (health){
+            health.TakeDamage(damage);
+        }
 
     }
     IEnumerator StopFlash(){

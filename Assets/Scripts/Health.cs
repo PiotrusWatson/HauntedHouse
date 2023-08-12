@@ -26,7 +26,10 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(float damage){
         health -= damage;
-        
         Ouch.Invoke();
+    }
+
+    public float GetHealth(){
+        return health;
     }
 }
