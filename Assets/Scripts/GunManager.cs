@@ -6,6 +6,7 @@ public class GunManager : MonoBehaviour
 {
 
     public GameObject muzzleFlash;
+    public GameObject bulletEffect;
     //play animation
     Animator animator;
     public bool DebugBang;
@@ -31,6 +32,7 @@ public class GunManager : MonoBehaviour
         animator.SetTrigger("BangBang");
         muzzleFlash.SetActive(true);
         StartCoroutine(StopFlash());
+        Instantiate(bulletEffect, muzzleFlash.transform.position, transform.rotation);
 
     }
     IEnumerator StopFlash(){

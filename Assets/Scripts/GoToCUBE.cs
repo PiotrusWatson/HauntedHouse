@@ -45,7 +45,10 @@ public class GoToCUBE : MonoBehaviour
 
     }
 
-  IEnumerator Wait() 
+  IEnumerator Wait(){
+    yield return Wait(delay);
+  }
+  IEnumerator Wait(int delay) 
   {
         if (!seenSwitch)
         {

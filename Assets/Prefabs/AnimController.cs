@@ -36,4 +36,8 @@ public class AnimController : MonoBehaviour
         }
     }
 
+    public void Owie(){
+        animator.SetTrigger("Ow");
+    }
+
 }
