@@ -8006,13 +8006,14 @@ GameObject:
   - component: {fileID: 3408607944967889333}
   - component: {fileID: 7632277373107813300}
   - component: {fileID: 6383399192367579576}
-  - component: {fileID: 6955490079490675621}
   - component: {fileID: 8371734284113692176}
   - component: {fileID: 912911564561816069}
   - component: {fileID: 8477162357256669723}
   - component: {fileID: 1896838925114480393}
   - component: {fileID: 7868111941442724317}
   - component: {fileID: 6114662086776993124}
+  - component: {fileID: 7956088725071756292}
+  - component: {fileID: 277273030209754666}
   m_Layer: 0
   m_Name: Zombie_Bellboy_Male_01 1
   m_TagString: Zombie
@@ -8178,25 +8179,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &6955490079490675621
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8694385477097833895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a671dbf1c6235fb4c916891bd201c6f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  distanceWhenWereBored: 0
-  ZOMBIEMODE: 1
-  delay: 0
-  objectives:
-  - {fileID: 0}
-  seenSwitch: 0
-  rotationSpeed: 0
 --- !u!136 &8371734284113692176
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -8273,7 +8255,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6955490079490675621}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: GoToCUBE, Assembly-CSharp
         m_MethodName: Stop
         m_Mode: 4
@@ -8287,7 +8269,19 @@ MonoBehaviour:
         m_CallState: 2
   Ded:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7868111941442724317}
+        m_TargetAssemblyTypeName: AnimController, Assembly-CSharp
+        m_MethodName: Ded
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &7868111941442724317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8302,6 +8296,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   rb: {fileID: 3408607944967889333}
+  corpse: {fileID: 2430176625077284975, guid: 29b537e18ee861b459b3f2133490cad6, type: 3}
+  deathForce: 10000
 --- !u!82 &6114662086776993124
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8398,6 +8394,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7956088725071756292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8694385477097833895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61ff0596bc7a43d43b7f4d8115075a72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FinishedWaiting:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &277273030209754666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8694385477097833895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00957f4a6dd16e44ab35fb3057762ab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!1 &8730528967436024945
 GameObject:
   m_ObjectHideFlags: 0

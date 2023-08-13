@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.AI;
 
-// [RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(NavigationManager))]
 public class GoToCUBE : MonoBehaviour
 {
 
