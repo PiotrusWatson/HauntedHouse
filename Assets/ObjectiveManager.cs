@@ -22,18 +22,20 @@ public class ObjectiveManager : MonoBehaviour
     }
 
     void Start(){
-        navManager.SetDestination(objectives[0].transform.position);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Vector3.Distance(transform.position, objectives[currentObjectiveIndex].transform.position) < desiredDistanceFromObjective){
-            controller.ToggleIsSearching(true);
-            navManager.Wait(timeToWaitAtObjective);
-        }
+
     }
 
+
+    public bool IsCloseToObjective(){
+        return Vector3.Distance(transform.position, objectives[currentObjectiveIndex].transform.position) < desiredDistanceFromObjective;
+    }
+    
     public void GoToNextObjective(){
         if (currentObjectiveIndex >= objectives.Length){
             return;
@@ -41,4 +43,19 @@ public class ObjectiveManager : MonoBehaviour
         currentObjectiveIndex += 1;
         navManager.SetDestination(objectives[currentObjectiveIndex].transform.position);
     }
+
+    public void Init(){
+        navManager.SetDestination(objectives[0].transform.position);
+    }
+
+    public void GoToObjective(){
+        navManager.SetDestination(objectives[currentObjectiveIndex].transform.position);
+    }
+
+    public void WaitAtObjective(){
+        controller.ToggleIsSearching(true);
+        navManager.Wait(timeToWaitAtObjective);
+    }
+
+
 }
