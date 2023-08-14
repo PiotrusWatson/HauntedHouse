@@ -15617,6 +15617,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: protagonist
       objectReference: {fileID: 0}
+    - target: {fileID: 7923303934969751141, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
+      propertyPath: BrainDed.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923303934969751141, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
+      propertyPath: BrainDed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923303934969751141, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
+      propertyPath: BrainDed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1204055747}
+    - target: {fileID: 7923303934969751141, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
+      propertyPath: BrainDed.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923303934969751141, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
+      propertyPath: BrainDed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ToWinScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923303934969751141, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
+      propertyPath: BrainDed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SceneChanger, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7923303934969751141, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
+      propertyPath: BrainDed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -18819,6 +18847,31 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1204055747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204055735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e8a95373da3859478e4fb2188c7490d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  endOfAnimation: 0
+--- !u!114 &1204055748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1204055735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e835d2b991d77b943b72f63f4bfb350c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1214428433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26083,6 +26136,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2780154981804297410, guid: e3a37a9f2a3b372459a20b6890b17462, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1204055741}
+    - targetCorrespondingSourceObject: {fileID: 2780154981804297410, guid: e3a37a9f2a3b372459a20b6890b17462, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1204055747}
+    - targetCorrespondingSourceObject: {fileID: 2780154981804297410, guid: e3a37a9f2a3b372459a20b6890b17462, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1204055748}
   m_SourcePrefab: {fileID: 100100000, guid: e3a37a9f2a3b372459a20b6890b17462, type: 3}
 --- !u!1001 &1745719797
 PrefabInstance:
@@ -29160,7 +29219,19 @@ MonoBehaviour:
       m_Calls: []
   Ded:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1204055747}
+        m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
+        m_MethodName: ToWinScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1947331057 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3209090328146653077, guid: 25bd4568128cf9e438eb47a0ac09a512, type: 3}

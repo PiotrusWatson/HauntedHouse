@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//TODO make this like less reliant on numbers that WILL change
 public class SceneChanger : MonoBehaviour {
     public bool endOfAnimation;
     // Start is called before the first frame update
@@ -27,5 +28,9 @@ public class SceneChanger : MonoBehaviour {
 
     public void ToCredits(){
         UnityEngine.SceneManagement.SceneManager.LoadScene(5);
+    }
+
+    public void ToWinScene(){
+        UnityEngine.SceneManagement.SceneManager.LoadScene(3);
     }
 }

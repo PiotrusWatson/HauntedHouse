@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-
+using UnityEngine.Events;
 
 public class MoraleManager : MonoBehaviour
 {
     HashSet<Spooker> spookLedger;
     public Morale morale;
     public float startingMorale;
+    public UnityEvent BrainDed;
     // Start is called before the first frame update
     void Awake()
     {
@@ -19,7 +20,7 @@ public class MoraleManager : MonoBehaviour
     // Update is called once per frame
     void Update() {
         if (morale.amount <= 0) {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(3);
+            BrainDed.Invoke();
         }
     }
 
