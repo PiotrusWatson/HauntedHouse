@@ -42,7 +42,7 @@ public class FieldOfView : MonoBehaviour
             List<Transform> finalList = new List<Transform>();
             foreach (Transform target in visibleTargets)
             {
-                if (target.GetComponent<GoToCUBE>() != null)
+                if (target.GetComponent<ZombieBehaviour>() != null)
                 {
                     zombies.Add(target);
                 }

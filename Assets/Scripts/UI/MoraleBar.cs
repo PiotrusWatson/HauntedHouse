@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
-public class HealthBar : MonoBehaviour
+public class MoraleBar : MonoBehaviour
 {
     UIDocument doc;
     ProgressBar bar;
@@ -20,7 +20,7 @@ public class HealthBar : MonoBehaviour
     void Start()
     {
         doc = GetComponent<UIDocument>();
-        bar = doc.rootVisualElement.Query<ProgressBar>("HealthBar");
+        bar = doc.rootVisualElement.Query<ProgressBar>("MoraleBar");
         bar.highValue = morale.amount;
         StartCoroutine(UpdateHealth(delayInUpdate));
     }

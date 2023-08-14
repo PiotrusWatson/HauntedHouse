@@ -35,7 +35,7 @@ public class MoraleManager : MonoBehaviour
         foreach (Spooker spook in newSpooks){
             spook.CollectSpookData(transform.position);
             SubtractMorale(spook);
-            if (spook.GetComponent<GoToCUBE>() != null){
+            if (spook.GetComponent<ZombieBehaviour>() != null){
                 //zombie case :)
                 rejectedSpooks.Add(spook);
             }

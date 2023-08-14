@@ -1,3 +1,8 @@
-.unity-progress-bar__progress {
-    background-color: rgb(229, 108, 3);
+#MoraleBar .unity-progress-bar__progress {
+    background-color: rgb(241, 114, 3);
+    font-size: 40%;
+}
+
+#HealthBar .unity-progress-bar__progress {
+    background-color: rgb(241, 3, 17);
 }
