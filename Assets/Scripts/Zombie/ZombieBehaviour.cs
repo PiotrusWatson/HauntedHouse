@@ -7,8 +7,12 @@ using UnityEngine;
 public class ZombieBehaviour : MonoBehaviour
 {
     public GameObject target;
+    public float chaseDelay;
     NavigationManager navigationManager;
     DamageInRadius damager;
+
+
+
 
     // Start is called before the first frame update
     void Awake()
@@ -17,11 +21,21 @@ public class ZombieBehaviour : MonoBehaviour
         damager = GetComponent<DamageInRadius>();
     }
 
+    void Start(){
+        StartCoroutine(ChaseWithDelay());
+    }
+
     // Update is called once per frame
     void Update()
     {
-        navigationManager.SetDestination(target.transform.position);
         damager.Damage();
 
+    }
+
+    IEnumerator ChaseWithDelay(){
+        while(true){
+            navigationManager.SetDestination(target.transform.position);
+            yield return new WaitForSeconds(chaseDelay);
+        }
     }
 }
