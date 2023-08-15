@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class CombatHandler : MonoBehaviour
 {
+    FaceObjective faceObjective;
     public float rotationSpeed;
     GameObject target;
     // Start is called before the first frame update
     void Start()
     {
-        
+        faceObjective = GetComponent<FaceObjective>();
     }
 
     // Update is called once per frame
@@ -17,7 +18,7 @@ public class CombatHandler : MonoBehaviour
     {
         //temp shit
         target = FindNearestZombie();
-        transform.rotation = GetRotationToPoint(target);
+        transform.rotation = faceObjective.GetRotationToPoint(target);
     }
 
     GameObject FindNearestZombie(){
@@ -35,10 +36,4 @@ public class CombatHandler : MonoBehaviour
         return closestZombie;
     }
 
-    Quaternion GetRotationToPoint(GameObject point){
-        Vector3 targetDirection = point.transform.position - transform.position;
-        float singleStep = rotationSpeed * Time.deltaTime;
-        Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
-        return Quaternion.LookRotation(newDirection);
-    }
 }
