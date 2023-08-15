@@ -31,6 +31,7 @@ public class RadiusDisplayer : MonoBehaviour {
             line.startColor = savedStartColor;
             line.endColor = savedEndColor;
             line.useWorldSpace = false;
+            line.forceRenderingOff = false;
         }
         else {
             line.startColor = Color.clear;
@@ -38,6 +39,7 @@ public class RadiusDisplayer : MonoBehaviour {
             //lmao why does turning it off and on again make it invisible this is so funny
             line.useWorldSpace = false;
             line.useWorldSpace = true;
+            line.forceRenderingOff = true;
         }
 
 
