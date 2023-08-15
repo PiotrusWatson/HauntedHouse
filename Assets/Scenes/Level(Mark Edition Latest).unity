@@ -19020,6 +19020,10 @@ PrefabInstance:
       propertyPath: chaseDelay
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 277273030209754666, guid: ade61bf3f75266e4e9df7b098b3909c1, type: 3}
+      propertyPath: attackDelay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1230890645631374058, guid: ade61bf3f75266e4e9df7b098b3909c1, type: 3}
       propertyPath: m_RootOrder
       value: 6

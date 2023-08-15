@@ -8,6 +8,7 @@ public class ZombieBehaviour : MonoBehaviour
 {
     public GameObject target;
     public float chaseDelay;
+    public float attackDelay;
     NavigationManager navigationManager;
     DamageInRadius damager;
 
@@ -23,12 +24,13 @@ public class ZombieBehaviour : MonoBehaviour
 
     void Start(){
         StartCoroutine(ChaseWithDelay());
+        StartCoroutine(AttackWithDelay());
     }
 
     // Update is called once per frame
     void Update()
     {
-        damager.Damage();
+        
 
     }
 
@@ -36,6 +38,13 @@ public class ZombieBehaviour : MonoBehaviour
         while(true){
             navigationManager.SetDestination(target.transform.position);
             yield return new WaitForSeconds(chaseDelay);
+        }
+    }
+
+    IEnumerator AttackWithDelay(){
+        while(true){
+            damager.Damage();
+            yield return new WaitForSeconds(attackDelay);
         }
     }
 }
