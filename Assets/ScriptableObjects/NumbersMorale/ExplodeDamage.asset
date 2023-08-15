@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b611b099447543498623838ccb3caf0, type: 3}
   m_Name: ExplodeDamage
   m_EditorClassIdentifier: 
-  amount: 30
+  amount: 18
