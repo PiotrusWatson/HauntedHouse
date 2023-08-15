@@ -23,9 +23,6 @@ public class FieldOfView : MonoBehaviour
     public List<Transform> visibleTargets;
     public SeeingEvent IsawANewThing;
     
-
-
-
     void Start()
     {
         visibleTargets = new List<Transform>();

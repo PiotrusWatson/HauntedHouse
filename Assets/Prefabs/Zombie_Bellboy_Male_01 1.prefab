@@ -3280,6 +3280,7 @@ GameObject:
   - component: {fileID: 3522612484816933857}
   - component: {fileID: 1665354322597876134}
   - component: {fileID: 8175220541422035856}
+  - component: {fileID: 6350978444847072055}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3371,6 +3372,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &6350978444847072055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4084080957537233515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 348fec5ef790b754c8af0360684e9ce6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4113724619974307038
 GameObject:
   m_ObjectHideFlags: 0
@@ -8014,6 +8027,8 @@ GameObject:
   - component: {fileID: 6114662086776993124}
   - component: {fileID: 7956088725071756292}
   - component: {fileID: 277273030209754666}
+  - component: {fileID: 445569683046577898}
+  - component: {fileID: 6634768430478532500}
   m_Layer: 0
   m_Name: Zombie_Bellboy_Male_01 1
   m_TagString: Zombie
@@ -8422,6 +8437,41 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!135 &445569683046577898
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8694385477097833895}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.08
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6634768430478532500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8694385477097833895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a13f9f920476f8148858e9d6253586c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagToTarget: Player
+  damage: {fileID: 11400000, guid: 8aa1b3e0aabc82c4cb4481bf982e5e4c, type: 2}
 --- !u!1 &8730528967436024945
 GameObject:
   m_ObjectHideFlags: 0

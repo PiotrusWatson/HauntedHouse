@@ -12,9 +12,13 @@ public class FinishSpookingEvent : UnityEvent<GameObject>{
 //Could make more generic later???? if we need diff interactions oops
 [RequireComponent(typeof(Spooker))]
 [RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(DamageInRadius))]
+[RequireComponent(typeof(RadiusDisplayer))]
 public class CursorInteraction : MonoBehaviour
 {
     public GameObject createdGameObject;
+    DamageInRadius damager;
+    RadiusDisplayer displayer;
 
     Material originalMaterial;
     public Material hoverMaterial;
@@ -42,6 +46,8 @@ public class CursorInteraction : MonoBehaviour
         childRenderer = GetComponentsInChildren<Renderer>();
         audioSource = GetComponent<AudioSource>();
         spook = GetComponent<Spooker>();
+        damager = GetComponent<DamageInRadius>();
+        displayer = GetComponent<RadiusDisplayer>();
 
     }
 
@@ -63,17 +69,18 @@ public class CursorInteraction : MonoBehaviour
     }
     public void CurrentClickedGameObject(GameObject clickedgameObject) {
         if (clickedgameObject == gameObject && !isDone) {
-            Debug.Log("you clicked " + clickedgameObject.name);
             MakeSomeNoise();
             Instantiate(createdGameObject, transform.position, Quaternion.identity);
-            spook.ToggleSpook(true);
+            damager.Damage();
             isDone = true;
 
             foreach (Renderer renderer in childRenderer) {
                 if (afterInteractionMaterial != null) {
                     renderer.material = afterInteractionMaterial;
                 }
+                
             }
+            displayer.ToggleVisibility(false);
         }
     }
     public void CurrentHoveredGameObject(GameObject hoveredgameObject) {
@@ -83,12 +90,14 @@ public class CursorInteraction : MonoBehaviour
                     renderer.material = hoverMaterial;
                 }
             }
+            displayer.ToggleVisibility(true);
         } else if (!isDone) {
             foreach (Renderer renderer in childRenderer) {
                 if (originalMaterial != null) {
                     renderer.material = originalMaterial;
                 }
             }
+            displayer.ToggleVisibility(false);
         }
     }
 }
