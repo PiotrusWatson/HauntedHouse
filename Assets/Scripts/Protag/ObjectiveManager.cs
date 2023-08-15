@@ -49,6 +49,8 @@ public class ObjectiveManager : MonoBehaviour
     }
 
     public void GoToObjective(){
+        Debug.Log(navManager);
+        Debug.Log(objectives[currentObjectiveIndex]);
         navManager.SetDestination(objectives[currentObjectiveIndex].transform.position);
     }
 

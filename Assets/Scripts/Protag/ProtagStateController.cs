@@ -6,7 +6,7 @@ public class ProtagStateController : MonoBehaviour, IStateController
 {
     private State currentState;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         SetState(new ObjectiveState(gameObject, this));
     }

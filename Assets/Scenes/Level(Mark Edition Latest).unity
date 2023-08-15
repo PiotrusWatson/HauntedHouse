@@ -15782,7 +15782,8 @@ PrefabInstance:
       propertyPath: BrainDed.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4027153755031955220, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 2847232986779489515, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
