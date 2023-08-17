@@ -4,6 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(NavigationManager))]
 [RequireComponent(typeof(ProtagonistAnimationController))]
+[RequireComponent(typeof(FaceObjective))]
 public class ObjectiveManager : MonoBehaviour
 {
     public GameObject[] objectives;
@@ -13,6 +14,7 @@ public class ObjectiveManager : MonoBehaviour
     NavigationManager navManager;
     ProtagonistAnimationController controller;
     int currentObjectiveIndex = 0;
+    FaceObjective faceObjective;
 
     // Start is called before the first frame update
     void Awake()
@@ -22,7 +24,7 @@ public class ObjectiveManager : MonoBehaviour
     }
 
     void Start(){
-        
+        faceObjective = GetComponent<FaceObjective>();
     }
 
     // Update is called once per frame
@@ -55,6 +57,7 @@ public class ObjectiveManager : MonoBehaviour
     }
 
     public void WaitAtObjective(){
+        transform.rotation = faceObjective.GetRotationToPoint(objectives[currentObjectiveIndex]);
         controller.ToggleIsSearching(true);
         navManager.Wait(timeToWaitAtObjective);
     }
