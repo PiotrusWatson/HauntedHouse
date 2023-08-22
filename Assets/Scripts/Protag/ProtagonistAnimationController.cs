@@ -17,5 +17,6 @@ public class ProtagonistAnimationController : MonoBehaviour
 
     public void ToggleIsSearching(bool toggle){
         animator.SetBool("IsSearch", toggle);
+        Debug.Log("IsSearch IS NOW: " + toggle);
     }
 }

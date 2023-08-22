@@ -24561,7 +24561,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4528267784794318, guid: 4b7e2afae84d5aa4b881c4348964870b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.2329569
+      value: -1.16
       objectReference: {fileID: 0}
     - target: {fileID: 4528267784794318, guid: 4b7e2afae84d5aa4b881c4348964870b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -24569,7 +24569,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4528267784794318, guid: 4b7e2afae84d5aa4b881c4348964870b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.9308548
+      value: -0.89
       objectReference: {fileID: 0}
     - target: {fileID: 4528267784794318, guid: 4b7e2afae84d5aa4b881c4348964870b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -24626,7 +24626,7 @@ NavMeshObstacle:
   m_MoveThreshold: 0.1
   m_Carve: 1
   m_CarveOnlyStationary: 0
-  m_Center: {x: -0.7, y: 1.498, z: 0.082}
+  m_Center: {x: -1.07, y: 1.498, z: 0.082}
   m_TimeToStationary: 0.5
 --- !u!1 &1634797200 stripped
 GameObject:
@@ -26064,6 +26064,10 @@ PrefabInstance:
     - target: {fileID: 7448061602999719134, guid: fd2d21850aa49b14fae63389d5647025, type: 3}
       propertyPath: m_Parameters.generateLightingData
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9147760701518943000, guid: fd2d21850aa49b14fae63389d5647025, type: 3}
+      propertyPath: m_Center.y
+      value: -1.66
       objectReference: {fileID: 0}
     - target: {fileID: 9147760701518943000, guid: fd2d21850aa49b14fae63389d5647025, type: 3}
       propertyPath: m_IsTrigger
