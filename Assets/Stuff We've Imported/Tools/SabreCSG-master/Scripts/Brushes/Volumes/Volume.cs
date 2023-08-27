@@ -1,4 +1,4 @@
-﻿#if UNITY_EDITOR || RUNTIME_CSG
+﻿
 
 using System;
 using System.Collections.Generic;
@@ -80,4 +80,3 @@ namespace Sabresaurus.SabreCSG
     }
 }
 
-#endif

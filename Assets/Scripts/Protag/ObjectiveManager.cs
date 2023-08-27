@@ -51,12 +51,13 @@ public class ObjectiveManager : MonoBehaviour
     }
 
     public void GoToObjective(){
-        Debug.Log(navManager);
-        Debug.Log(objectives[currentObjectiveIndex]);
         navManager.SetDestination(objectives[currentObjectiveIndex].transform.position);
     }
 
     public void WaitAtObjective(){
+        if (navManager.AreWeWaiting()){
+            return;
+        }
         transform.rotation = faceObjective.GetRotationToPoint(objectives[currentObjectiveIndex]);
         controller.ToggleIsSearching(true);
         navManager.Wait(timeToWaitAtObjective);
