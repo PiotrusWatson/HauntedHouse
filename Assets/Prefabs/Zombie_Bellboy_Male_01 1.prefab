@@ -8422,7 +8422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00957f4a6dd16e44ab35fb3057762ab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 4601030497416853185, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
   chaseDelay: 2
   attackDelay: 1
 --- !u!135 &445569683046577898
