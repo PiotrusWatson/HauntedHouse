@@ -28,4 +28,13 @@ public class ProtagStateController : MonoBehaviour, IStateController
             currentState.OnStateEnter();
         }
     }
+
+    //refactor later!!
+    public void GoToCombat(){
+        SetState(new CombatState(gameObject, this));
+    }
+
+    public void GoToObjective(){
+         SetState(new ObjectiveState(gameObject, this));
+    }
 }

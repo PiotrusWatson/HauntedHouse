@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class ObjectiveState : State
 {
     NavigationManager navman;
@@ -15,6 +16,10 @@ public class ObjectiveState : State
         navman = gameObj.GetComponent<NavigationManager>();
         objectiveMan = gameObj.GetComponent<ObjectiveManager>();
         objectiveMan.GoToObjective();
+    }
+
+    public override void OnStateExit(){
+        objectiveMan.StopGoingToObjectives();
     }
 
     public override void Update()

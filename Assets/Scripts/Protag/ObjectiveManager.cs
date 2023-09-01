@@ -54,6 +54,10 @@ public class ObjectiveManager : MonoBehaviour
         navManager.SetDestination(objectives[currentObjectiveIndex].transform.position);
     }
 
+    public void StopGoingToObjectives(){
+        navManager.SetDestination(transform.position);
+    }
+
     public void WaitAtObjective(){
         if (navManager.AreWeWaiting()){
             return;

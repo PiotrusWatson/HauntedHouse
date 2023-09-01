@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GunManager : MonoBehaviour
@@ -14,6 +15,8 @@ public class GunManager : MonoBehaviour
     AudioSource source;
     public bool DebugBang;
     public float amountToStayUp;
+    public float fireDelay;
+    public float bulletsPerBurst;
     
 
     // Start is called before the first frame update
@@ -43,7 +46,6 @@ public class GunManager : MonoBehaviour
         bool isHit = Physics.Raycast(transform.position, transform.forward, out hit);
         
         Health health = hit.collider.GetComponent<Health>();
-        Debug.DrawLine(transform.position, hit.collider.transform.position);
         if (isHit && health){
             health.TakeDamage(damage);
         }
@@ -52,5 +54,16 @@ public class GunManager : MonoBehaviour
     IEnumerator StopFlash(){
         yield return new WaitForSeconds(amountToStayUp);
         muzzleFlash.SetActive(false);
+    }
+
+    IEnumerator FireBurst(){
+        for (int i = 0; i < bulletsPerBurst; i++){
+            yield return new WaitForSeconds(fireDelay);
+            Fire();
+        }
+    }
+
+    public void FireBullets(){
+        StartCoroutine(FireBurst());
     }
 }

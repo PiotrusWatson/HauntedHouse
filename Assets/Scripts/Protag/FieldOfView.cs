@@ -21,7 +21,9 @@ public class FieldOfView : MonoBehaviour
     public LayerMask obstacleMask;
 
     public List<Transform> visibleTargets;
+    List<Transform> visibleZombies;
     public SeeingEvent IsawANewThing;
+    public SeeingEvent IsawAThingIWantToKill;
     
     void Start()
     {
@@ -34,14 +36,16 @@ public class FieldOfView : MonoBehaviour
         {
             yield return new WaitForSeconds(delay);
             List<Transform> lastCheckedTargets = new List<Transform>(visibleTargets);
-            FindVisibleTargets();
-            List<Transform> zombies = new List<Transform>();
+            //fills the visibletargets 
+            visibleTargets = FindVisibleTargets();
+
+            visibleZombies = new List<Transform>();
             List<Transform> finalList = new List<Transform>();
             foreach (Transform target in visibleTargets)
             {
                 if (target.GetComponent<ZombieBehaviour>() != null)
                 {
-                    zombies.Add(target);
+                    visibleZombies.Add(target);
                 }
             }
             bool seenNewThing = GuyHasSeenNewThing(lastCheckedTargets, visibleTargets);
@@ -49,37 +53,49 @@ public class FieldOfView : MonoBehaviour
             {
                 finalList.AddRange(visibleTargets);
             }
-            if (zombies.Count > 0)
+            if (ThereAreZombies())
             {
-                finalList.AddRange(zombies);
+                finalList.AddRange(visibleZombies);
             }
 
-            if (seenNewThing || zombies.Count > 0)
+            if (seenNewThing)
             {
                 IsawANewThing.Invoke(finalList.ToArray());
-
+                
             }
+
+            if (ThereAreZombies()){
+                IsawAThingIWantToKill.Invoke(visibleZombies.ToArray());
+            }
+            
         }
     }
     
+    //is there anything newly visible that isn't something we've seen before?
     bool GuyHasSeenNewThing(List<Transform> currentlyVisible, List<Transform> newlyVisible){
         return newlyVisible.Except(currentlyVisible).ToList().Count > 0;
     }
-    void FindVisibleTargets(){
-        visibleTargets.Clear();
+    List<Transform> FindVisibleTargets(){
+        visibleTargets = new List<Transform>();
+        //gets everything in radius
         Collider[] targetsInViewRadius = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
+
+        //for each thing in radius
         for (int i=0; i < targetsInViewRadius.Length; i++){
+            //check if it's within the angle
             Transform target = targetsInViewRadius[i].transform;
             Vector3 directionToTarget = (target.position - transform.position).normalized;
             if (Vector3.Angle(transform.forward, directionToTarget) < viewAngle / 2){
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
 
-              //  if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstacleMask)){
+                //fire a laser at the thing, does it hit the thing? or does it hit a wall or smt
+                if (Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstacleMask)){
                   visibleTargets.Add(target);
-               // }
+                }
             }
 
         }
+        return visibleTargets;
     }
     public Vector3 DirectionFromAngle(float angle, bool angleIsGlobal){
         if (!angleIsGlobal) {
@@ -87,12 +103,12 @@ public class FieldOfView : MonoBehaviour
         }
         return new Vector3(Mathf.Sin(angle * Mathf.Deg2Rad), 0, Mathf.Cos(angle * Mathf.Deg2Rad)); 
     }
-    // Start is called before the first frame update
-  
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public Transform[] GetVisibleZombies(){
+        return visibleZombies.ToArray();
+    }
+
+    public bool ThereAreZombies(){
+        return visibleZombies.Count > 0;
     }
 }
