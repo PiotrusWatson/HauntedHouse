@@ -1,5 +1,4 @@
-﻿#if UNITY_EDITOR || RUNTIME_CSG
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +7,7 @@ using System.Linq;
 
 namespace Sabresaurus.SabreCSG
 {
+
     /// <summary>
     /// Brush groups are created when the user wants to group together some brushes.
     /// </summary>
@@ -16,7 +16,7 @@ namespace Sabresaurus.SabreCSG
     {
         [SerializeField]
         protected Bounds localBounds = new Bounds(Vector3.zero, new Vector3(2, 2, 2));
-
+        #if UNITY_EDITOR || RUNTIME_CSG
         /// <summary>
         /// Gets a value indicating whether this brush supports CSG operations. Setting this to false
         /// will hide CSG brush related options in the editor.
@@ -41,7 +41,6 @@ namespace Sabresaurus.SabreCSG
         private Vector3 m_LastKnownExtents;
         /// <summary>The last known position of the compound brush to prevent movement on resizing the bounds.</summary>
         private Vector3 m_LastKnownPosition;
-
         protected override void Awake()
         {
             base.Awake();
@@ -267,6 +266,7 @@ namespace Sabresaurus.SabreCSG
 
             return polygonsCopy;
         }
+        #endif
     }
+    
 }
-#endif

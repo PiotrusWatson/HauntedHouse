@@ -1,4 +1,4 @@
-﻿#if UNITY_EDITOR || RUNTIME_CSG
+﻿
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -37,7 +37,7 @@ namespace Sabresaurus.SabreCSG
         protected bool destroyed = false;
 
         protected string previousHierarchyName = "";
-
+        #if UNITY_EDITOR || RUNTIME_CSG
         public CSGMode Mode
 		{
 			get
@@ -279,7 +279,7 @@ namespace Sabresaurus.SabreCSG
         }
 
         protected virtual void Update() { }
+        #endif
     }
 }
 
-#endif

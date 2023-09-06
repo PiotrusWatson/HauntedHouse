@@ -27,6 +27,11 @@ public class NavigationManager : MonoBehaviour
         StartCoroutine(WaitNumerator(delay));
     }
 
+
+    public void InvokeWaitingOver(){
+        FinishedWaiting.Invoke();
+    }
+    
     IEnumerator WaitNumerator(float delay) 
   {
         if (!isWaiting)

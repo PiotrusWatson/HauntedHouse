@@ -58,16 +58,26 @@ public class SpawnerManager : MonoBehaviour
 
     }
 
+//this is now slower oops
     public Spawner FindVisibleSpawner(){
+        GameObject closestSpawner = null;
+        float closestSpawnerDistance = Vector3.Distance(Camera.main.transform.position, spawners[0].transform.position);
         foreach (GameObject spawny in spawners){
             Vector3 viewportSpawnerPos = Camera.main.WorldToViewportPoint(spawny.transform.position);
+            
+            //is the thing outside of the camera viewport???
             if (viewportSpawnerPos.x < 0 || viewportSpawnerPos.x > 1 || viewportSpawnerPos.y < 0 || viewportSpawnerPos.y > 1){
+            //ok it isn't so lets check if its closer than what we have so far
+            } else {
+                float spawnerDistance = Vector3.Distance(Camera.main.transform.position, spawny.transform.position);
+                if (spawnerDistance <= closestSpawnerDistance){
+                    closestSpawner = spawny;
+                    closestSpawnerDistance = spawnerDistance;
+                }
 
-            } else{
-                return spawny.GetComponent<Spawner>();
             }
         
         }
-        return null;
+        return closestSpawner.GetComponent<Spawner>();
     }
 }
