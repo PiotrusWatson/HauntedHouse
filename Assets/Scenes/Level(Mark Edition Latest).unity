@@ -15762,6 +15762,10 @@ PrefabInstance:
       value: 360
       objectReference: {fileID: 0}
     - target: {fileID: 4124061095063657528, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
+      propertyPath: timeToWaitAtObjective
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4124061095063657528, guid: c27fe5f7842594a43ba16bb616a73462, type: 3}
       propertyPath: objectives.Array.data[0]
       value: 
       objectReference: {fileID: 1815061145}
